@@ -1,39 +1,96 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-User.destroy_all
-Ingredient.destroy_all
-Recipe.destroy_all
-RecipeIngredient.destroy_all
+# Ingredient.destroy_all
+# RecipeIngredient.destroy_all
+# Recipe.destroy_all
+# User.destroy_all
 
-us1 = User.create(name: "Eric")
-us2 = User.create(name: "Robert")
-us3 = User.create(name: "Matt")
-us4 = User.create(name: "Josh")
 
-in1 = Ingredient.create(name: "Milk", user_id: us1.id)
-in2 = Ingredient.create(name: "Eggs", user_id: us1.id)
-in3 = Ingredient.create(name: "Butter", user_id: us2.id)
-in4 = Ingredient.create(name: "Chicken", user_id: us2.id)
-in5 = Ingredient.create(name: "Pork", user_id: us3.id)
-in6 = Ingredient.create(name: "Lettuce", user_id: us3.id)
-in7 = Ingredient.create(name: "Coffee", user_id: us4.id)
-in8 = Ingredient.create(name: "Sugar", user_id: us4.id)
+puts "making seed data"
+####################Start Users#######################
+# 5 Users
+robert = User.create(name: 'Robert')
+eric = User.create(name: 'Eric')
+bill_gates = User.create(name: 'Bill Gates')
+tiger_woods = User.create(name: 'Tiger Woods')
+elon_musk = User.create(name: 'Elon Musk')
 
-rp1 = Recipe.create(name: "Milk and Eggs", user_id: us1.id)
-rp2 = Recipe.create(name: "Butter Chicken", user_id: us2.id)
-rp3 = Recipe.create(name: "Pork Salad", user_id: us3.id)
-rp4 = Recipe.create(name: "Literally coffee", user_id: us4.id)
+####################End Users#######################
 
-ri1 = RecipeIngredient.create(ingredient_id: in1.id, recipe_id: rp1.id)
-ri2 = RecipeIngredient.create(ingredient_id: in2.id, recipe_id: rp1.id)
-ri3 = RecipeIngredient.create(ingredient_id: in3.id, recipe_id: rp2.id)
-ri4 = RecipeIngredient.create(ingredient_id: in4.id, recipe_id: rp2.id)
-ri5 = RecipeIngredient.create(ingredient_id: in5.id, recipe_id: rp3.id)
-ri6 = RecipeIngredient.create(ingredient_id: in6.id, recipe_id: rp3.id)
-ri7 = RecipeIngredient.create(ingredient_id: in7.id, recipe_id: rp4.id)
-ri8 = RecipeIngredient.create(ingredient_id: in8.id, recipe_id: rp4.id)
+
+
+####################Start Ingredients#######################
+# Roberts Ingredients
+chicken = Ingredient.create(name: 'chicken', user_id: robert.id)
+yogurt = Ingredient.create(name: 'yogurt', user_id: robert.id)
+flour = Ingredient.create(name: 'flour', user_id: robert.id)
+lettuce = Ingredient.create(name: 'lettuce', user_id: robert.id)
+
+# Erics Ingredients
+milk = Ingredient.create(name: 'milk', user_id: eric.id)
+corn = Ingredient.create(name: 'corn', user_id: eric.id)
+oatmeal = Ingredient.create(name: 'oatmeal', user_id: eric.id)
+mushrooms = Ingredient.create(name: 'mushrooms', user_id: eric.id)
+
+# Bill Gates ingredients
+almonds = Ingredient.create(name: 'almonds', user_id: bill_gates.id)
+honey = Ingredient.create(name: 'honey', user_id: bill_gates.id)
+tomatoes = Ingredient.create(name: 'tomatoes', user_id: bill_gates.id)
+peas = Ingredient.create(name: 'peas', user_id: bill_gates.id)
+
+# Tiger Woods ingredients
+soy_sauce = Ingredient.create(name: 'soy sauce', user_id: tiger_woods.id)
+chocolate = Ingredient.create(name: 'chocolate', user_id: tiger_woods.id)
+eggplants = Ingredient.create(name: 'eggplants', user_id: tiger_woods.id)
+bananas = Ingredient.create(name: 'bananas', user_id: tiger_woods.id)
+
+# Elon Musk Ingredients
+eggs = Ingredient.create(name: 'eggs', user_id: elon_musk.id)
+salmon = Ingredient.create(name: 'salmon', user_id: elon_musk.id)
+blueberries = Ingredient.create(name: 'blueberries', user_id: elon_musk.id)
+olives = Ingredient.create(name: 'olives', user_id: elon_musk.id)
+
+####################End Ingredients#######################
+
+
+
+####################Start Recipes#######################
+# 5 Recipes
+fried_chicken_salad = Recipe.create(name: 'Fried Chicken Salad', user_id: robert.id)
+
+oatmeal_mash = Recipe.create(name: 'Oatmeal Mash', user_id: eric.id)
+
+almond_crusted_tomatoes = Recipe.create(name: 'Almond crusted tomatoes', user_id: bill_gates.id)
+
+chocolate_bananas = Recipe.create(name: 'Chocolate Bananas', user_id: tiger_woods.id)
+
+eggs_benedict = Recipe.create(name: 'Eggs Benedict', user_id: elon_musk.id)
+
+####################End Recipes#######################
+
+
+####################Start RecipeIngredient#################
+# Fried chicken salad -- Robert
+ri1 = RecipeIngredient.create(ingredient_id: chicken.id , recipe_id: fried_chicken_salad.id)
+ri2 = RecipeIngredient.create(ingredient_id: flour.id , recipe_id: fried_chicken_salad.id)
+ri3 = RecipeIngredient.create(ingredient_id: lettuce.id, recipe_id: fried_chicken_salad.id)
+
+# Oatmeal Mash -- Eric
+ri4 = RecipeIngredient.create(ingredient_id: milk.id , recipe_id: oatmeal_mash.id)
+ri5 = RecipeIngredient.create(ingredient_id: oatmeal.id , recipe_id: oatmeal_mash.id)
+ri6 = RecipeIngredient.create(ingredient_id: corn.id , recipe_id: oatmeal_mash.id)
+
+# Almond Crusted Tomatoes --Bill Gates
+ri7 = RecipeIngredient.create(ingredient_id: almonds.id , recipe_id: almond_crusted_tomatoes.id )
+ri8 = RecipeIngredient.create(ingredient_id: honey.id , recipe_id: almond_crusted_tomatoes.id)
+ri9 = RecipeIngredient.create(ingredient_id: tomatoes.id, recipe_id: almond_crusted_tomatoes.id)
+
+# Chocolate Bananas -- Tiger Woods
+ri10 = RecipeIngredient.create(ingredient_id: chocolate.id , recipe_id: chocolate_bananas.id )
+ri11 = RecipeIngredient.create(ingredient_id: bananas.id , recipe_id: chocolate_bananas.id)
+
+# Eggs Benedict-- Elon Musk
+ri12 = RecipeIngredient.create(ingredient_id: eggs.id , recipe_id: eggs_benedict.id)
+ri13 = RecipeIngredient.create(ingredient_id: salmon.id , recipe_id: eggs_benedict.id )
+
+####################End RecipeIngredient###################
+
+puts "seed data complete"
