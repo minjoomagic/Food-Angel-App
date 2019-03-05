@@ -7,11 +7,20 @@ class IngredientsController < ApplicationController
   end
 
   def create
-    @ingredient = Ingredient.create(name: params[:ingredient][:name].upcase, user_id: params[:ingredient][:user_id])
+    @ingredient = Ingredient.create(uppercased_ingredient_params)
     if @ingredient.save
       flash[:notice] = "#{@ingredient.name} has been added to your fridge!"
     elsif flash[:error] = @ingredient.errors.full_messages
     end
     redirect_to new_ingredient_path
+  end
+
+  private
+  def ingredient_params
+    params.require(:ingredient).permit(:name, :user_id)
+  end
+
+  def uppercased_ingredient_params
+    ingredient_params.merge({name: ingredient_params['name'].upcase!, user_id: ingredient_params['user_id']})
   end
 end

@@ -18429,3 +18429,1962 @@ Processing by IngredientsController#new as HTML
 Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.5ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "ingredients"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipe_ingredients"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "recipe_ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ingredient_id" integer, "recipe_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "username" varchar, "password_digest" varchar)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190305162331)[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190304212504),
+(20190305161531),
+(20190304212610),
+(20190304212633),
+(20190304212528),
+(20190305161926);
+
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-03-05 20:41:40.921184"], ["updated_at", "2019-03-05 20:41:40.921184"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "ingredients"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipe_ingredients"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "recipe_ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ingredient_id" integer, "recipe_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "username" varchar, "password_digest" varchar)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190305162331)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190304212504),
+(20190305161531),
+(20190304212610),
+(20190304212633),
+(20190304212528),
+(20190305161926);
+
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-03-05 20:41:40.949855"], ["updated_at", "2019-03-05 20:41:40.949855"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-03-05 20:41:40.953405"], ["key", "environment"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/new" for 127.0.0.1 at 2019-03-05 15:42:08 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-03-05 15:42:12 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (0.7ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 329ms (Views: 327.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "ingredients"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipe_ingredients"[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "recipe_ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ingredient_id" integer, "recipe_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "username" varchar, "password_digest" varchar)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190305162331)[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190304212504),
+(20190305161531),
+(20190304212610),
+(20190304212633),
+(20190304212528),
+(20190305161926);
+
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-03-05 20:42:39.098371"], ["updated_at", "2019-03-05 20:42:39.098371"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "ingredients"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipe_ingredients"[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "recipe_ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ingredient_id" integer, "recipe_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "username" varchar, "password_digest" varchar)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190305162331)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190304212504),
+(20190305161531),
+(20190304212610),
+(20190304212633),
+(20190304212528),
+(20190305161926);
+
+[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-03-05 20:42:39.135512"], ["updated_at", "2019-03-05 20:42:39.135512"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-03-05 20:42:39.139515"], ["key", "environment"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 15:43:12 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 318ms (Views: 280.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-05 15:43:18 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 85ms (Views: 82.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 15:43:19 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 51ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 15:43:29 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G49gxPQxI64EJwgXo9oD7EOb0PZEZ+3EsmTmZFwCTwfXvEQdus3rfhehKqSJ94X540KM6LneqWybJ19TfNVvLA==", "user"=>{"username"=>"Robert", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 15:43:29 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  [1m[36mRecipeIngredient Load (0.3ms)[0m  [1m[34mSELECT "recipe_ingredients".* FROM "recipe_ingredients"[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/users" for 127.0.0.1 at 2019-03-05 15:45:09 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 21ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 15:45:10 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 292ms (Views: 291.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2019-03-05 15:45:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/user/new" for 127.0.0.1 at 2019-03-05 15:45:20 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/user/new"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 15:45:26 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 66ms (Views: 53.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 15:45:58 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zdNZGslS3gjtzvAIo+J9dxgOx3nYnxHTK8V/Cc1gbLsns9EIX/E9qQ+/LaA9krcTrzq+MTlUVy6PLk5kyD84SA==", "user"=>{"username"=>"Robert", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 15:45:58 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 66ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 15:46:13 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zdNZGslS3gjtzvAIo+J9dxgOx3nYnxHTK8V/Cc1gbLsns9EIX/E9qQ+/LaA9krcTrzq+MTlUVy6PLk5kyD84SA==", "user"=>{"username"=>"Robert", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 15:46:13 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 15:47:09 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zdNZGslS3gjtzvAIo+J9dxgOx3nYnxHTK8V/Cc1gbLsns9EIX/E9qQ+/LaA9krcTrzq+MTlUVy6PLk5kyD84SA==", "user"=>{"username"=>"Robert", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 21ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 15:47:09 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 255ms (Views: 254.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-05 15:47:18 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rAVItsc8Vz7yTJqYqSVXywChpBXXSxpQTVbW7VbYNIZGZcCkUZ+0nxA9RzA3VZ2vt5XdXTaAXK3pveeAU4dgdQ==", "username"=>"Robert", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Robert"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 15:47:18 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-05 15:47:23 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/vB8h3MLioJ+Kr7p7qXECSgszh9ReI8kBSMz4DjEkxUUkPSV5ahpI5xbY0Fw1Q5tnxi3V7CzydmhyAKNPZvH5g==", "username"=>"Robert", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Robert"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 15:47:23 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-05 15:49:20 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 78ms (Views: 76.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 15:49:22 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 74ms (Views: 56.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 15:51:34 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XyGh0UrZbeu7tr/2pmm+VMZEI7r3drLtX1IxvVXzaeOTEoUIBCWlO6gwnUWMRDhBZp1/pArP9kV2EYiKdSRJyA==", "user"=>{"username"=>"Mike", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 15:51:34 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 75ms (Views: 73.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 15:51:58 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2k5BykqOlhgys/cAUzqrOZQ82GQmstQsa3awKPbmXsswLsnY3C11udDCKqjNSmFdIwihLMd5ktHPnYFF87kKOA==", "user"=>{"username"=>"Mike", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 11ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 15:51:58 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 37ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 15:58:25 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2k5BykqOlhgys/cAUzqrOZQ82GQmstQsa3awKPbmXsswLsnY3C11udDCKqjNSmFdIwihLMd5ktHPnYFF87kKOA==", "user"=>{"username"=>"Mike1", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 15:58:25 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 15:59:29 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2k5BykqOlhgys/cAUzqrOZQ82GQmstQsa3awKPbmXsswLsnY3C11udDCKqjNSmFdIwihLMd5ktHPnYFF87kKOA==", "user"=>{"username"=>"Mike2", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 15:59:29 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 16:00:04 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2k5BykqOlhgys/cAUzqrOZQ82GQmstQsa3awKPbmXsswLsnY3C11udDCKqjNSmFdIwihLMd5ktHPnYFF87kKOA==", "user"=>{"username"=>"Mike3", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 16:00:04 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 16:00:39 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 54ms (Views: 40.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 16:00:41 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z5ZbyqGKzeoZbGSeiwZHi+8VpNAaq5P/MbZLd9ZmhkWN9tPYNykuS/sduTYVdo3vWCHdmPtg1QKVXXoa0znStg==", "user"=>{"username"=>"eric", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 16:00:41 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 16:01:24 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 34ms (Views: 33.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 16:01:26 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z5ZbyqGKzeoZbGSeiwZHi+8VpNAaq5P/MbZLd9ZmhkWN9tPYNykuS/sduTYVdo3vWCHdmPtg1QKVXXoa0znStg==", "user"=>{"username"=>"eric", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "username", "password_digest") VALUES (?, ?, ?, ?)[0m  [["created_at", "2019-03-05 21:01:26.348279"], ["updated_at", "2019-03-05 21:01:26.348279"], ["username", "eric"], ["password_digest", "$2a$10$DVRgced8tfsVmL45ECQBtOYcI5a4dfRdmm0K.k./1tU0mMeioSjw6"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 96ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 16:01:26 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 55ms (Views: 34.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 16:01:47 -0500
+  
+SyntaxError (/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/controllers/application_controller.rb:31: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/application_controller.rb:31: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/users" for 127.0.0.1 at 2019-03-05 16:02:01 -0500
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 500 Internal Server Error in 1ms
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/application_controller.rb:15:in `logged_in?'
+app/controllers/application_controller.rb:28:in `authorized'
+Started GET "/users" for 127.0.0.1 at 2019-03-05 16:04:06 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 79ms (Views: 46.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:04:08 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (0.7ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 16:04:10 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `logged_in' for #<UsersController:0x007fa05667efa0>
+Did you mean?  logged_in?):
+  
+app/controllers/application_controller.rb:27:in `authorized'
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 16:04:15 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 16:04:15 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 53ms (Views: 42.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:04:19 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (2.2ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 77ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 16:04:20 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 16:04:20 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 46ms (Views: 40.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:04:40 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (1.6ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 108ms (Views: 106.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 16:04:41 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 16:04:41 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:05:51 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to 
+Completed 500 Internal Server Error in 76ms (Views: 67.3ms | ActiveRecord: 0.5ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/application_controller.rb:30:in `authorized'
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:09:35 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (0.7ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 54ms (Views: 53.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 16:09:38 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 16:09:38 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 16:10:24 -0500
+  
+SyntaxError (/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/controllers/application_controller.rb:34: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/application_controller.rb:34: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:10:33 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (0.7ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 66ms (Views: 65.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 16:10:35 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 51ms (Views: 36.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 16:10:49 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HRsvAFIPmn5F46xTL44k63X6LLFj2FGqMq7Luv0r2akrFA7IaTwbcUqxMll5yOEjs4Tbs+t9i0F1Lyn5mgpuNw==", "user"=>{"username"=>"Robert", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 16:10:49 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-05 16:10:57 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EOlEotNOkSA2dV+uBgqh5CMyK+CmL1o64L0IX3cHsqE8fssUa87Uz4PNoLZZ2MIVwlBq317kRZXg44yv+Dy+3A==", "username"=>"eric", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "eric"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 13261ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 16:11:10 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 81ms (Views: 80.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 16:16:57 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 36.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:17:00 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (1.5ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 73ms (Views: 72.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 16:17:01 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 61ms (Views: 45.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 16:17:05 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IfbF8uDvXyAlo75QaFOyS7ZchfJxBoubmbR9gq3MEQ4X+eQ629zeLyrxIFo+FXeDcCJy8PmjUXDeNZ/Byu2mkA==", "user"=>{"username"=>"Eric", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (8.3ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "username", "password_digest") VALUES (?, ?, ?, ?)[0m  [["created_at", "2019-03-05 21:17:05.467805"], ["updated_at", "2019-03-05 21:17:05.467805"], ["username", "Eric"], ["password_digest", "$2a$10$CS9u/rtiXRHwUNNI/famZuycD8TZLHaS5UW2Q0zVV1Pk/BJvZfh.O"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 89ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 16:17:05 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 43ms (Views: 31.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:23:14 -0500
+Processing by ApplicationController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 2ms
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 16:23:14 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 59ms (Views: 58.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:23:18 -0500
+Processing by ApplicationController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorized rendered or redirected
+Completed 302 Found in 1ms
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 16:23:18 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 53ms (Views: 52.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:26:50 -0500
+  
+ArgumentError (Before process_action callback :authorized has not been defined):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:29:10 -0500
+  
+ArgumentError (Before process_action callback :authorized has not been defined):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:30:52 -0500
+  
+SyntaxError (/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/controllers/application_controller.rb:34: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/application_controller.rb:34: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:30:59 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (0.9ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 69ms (Views: 67.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 16:31:01 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 73ms (Views: 47.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 16:31:04 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KSm3P3MTvEKUGqnoCSywQOaOqvPk5+8tIk6aqk8G890fJpb3SCA9TZtIN+JfanWIIPBd8WxCNcZlz3jpKCdEQw==", "user"=>{"username"=>"Matt", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (8.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "username", "password_digest") VALUES (?, ?, ?, ?)[0m  [["created_at", "2019-03-05 21:31:04.362613"], ["updated_at", "2019-03-05 21:31:04.362613"], ["username", "Matt"], ["password_digest", "$2a$10$4Eah0zXS8eKyeP.zoKNR..6ejch3IhBvitFIt0c3ElongBCWtYrWq"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 87ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 16:31:04 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 43ms (Views: 32.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 16:31:49 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered users/index.html.erb within layouts/application (224.4ms)
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `logout' for #<#<Class:0x007fa056c07aa8>:0x007fa05a4f5360>
+Did you mean?  logout_url):
+    10: <% end %>
+    11: <br>
+    12: <%= link_to "Add more items to Fridge!", new_ingredient_path %>
+    13: <%= button_to "Logout", logout %>
+  
+app/views/users/index.html.erb:13:in `_app_views_users_index_html_erb__1460539335024887843_70163343323240'
+Started GET "/users" for 127.0.0.1 at 2019-03-05 16:31:54 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 55ms (Views: 47.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2019-03-05 16:31:56 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/logout"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2019-03-05 16:32:54 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 41ms (Views: 33.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-03-05 16:32:55 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6SMgSig+Kvaqg8EOLCAL6QHlkM27yE9EJliFXJLjeuPFtK/8kL5vGR87PhZz8mgY4IfR8kMDUOsmBgGsHdh2ng=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 16:32:55 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 16:33:12 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 34ms (Views: 33.8ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-05 16:33:16 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3Dy0KLkqLaOtzdN9TsjaVkVfFoBlETwezp6n88hwciLwqzueAapoTBh1LGURGrmnpD1Xv53aI7HOwCMDR0t+Xw==", "username"=>"Matt", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Matt"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 10450ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:33:33 -0500
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:33:33 -0500
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:33:33 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#index as HTML
+Processing by ApplicationController#index as HTML
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendering application/index.html.erb within layouts/application
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (2.5ms)
+  Rendered application/index.html.erb within layouts/application (0.3ms)
+  Rendered application/index.html.erb within layouts/application (0.3ms)
+Started GET "/" for 127.0.0.1 at 2019-03-05 16:33:33 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 228ms (Views: 226.2ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 511ms (Views: 507.8ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 522ms (Views: 511.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 485ms (Views: 481.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 16:33:35 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 103ms (Views: 74.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 16:33:37 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-05 16:33:39 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AlHcT6v/GfBXO4OfIJbZGrAaScYS7ASpZVq5AzORD21p0rqYiCmmjOt+m+0iQfclcoLGj5X2kq0DnT8t9/RR0g==", "username"=>"Matt", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Matt"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 80ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 16:33:39 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 50ms (Views: 34.2ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-03-05 16:33:41 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PkLFxdyO83CCjk4ouyqXdgVTFYIUjse4wnyE7ETY7kIS1UpzZA62nzc2sTDk+PSH5DFUvexF2BfCIgAcy+PiPw=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 16:33:41 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 55ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-05 16:35:50 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xtkxmlDq9dAz5bl0C6f/WQ3yHTNr9y4DjfqqB1mtdvTqTr4s6GqwP4ZdRmxUdZyo7JBcDJM8MayNpC731pZ6iQ==", "username"=>"Eric", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Eric"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 77ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 16:35:50 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 16:35:58 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 69ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 16:36:01 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vYy761dYWQ5DBgBcfLS2NZpHoz8mjPhOqxzfmQLymHyRGzRd79gc4fa+/0QjZtXEeyXiAN5H5+GrQltpjcmUAQ==", "user"=>{"username"=>"Eric", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "username", "password_digest") VALUES (?, ?, ?, ?)[0m  [["created_at", "2019-03-05 21:36:01.309524"], ["updated_at", "2019-03-05 21:36:01.309524"], ["username", "Eric"], ["password_digest", "$2a$10$O/9fOlopCBcGvaoEze1Nne4GP2SQxlFOLimEugCh6X8B2PbNqQCBS"]]
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 90ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 16:36:01 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 43ms (Views: 37.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ingredients/new" for 127.0.0.1 at 2019-03-05 16:36:07 -0500
+Processing by IngredientsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering ingredients/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered ingredients/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 52ms (Views: 35.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/ingredients/new" for 127.0.0.1 at 2019-03-05 16:36:08 -0500
+Processing by IngredientsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering ingredients/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered ingredients/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 44ms (Views: 39.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/ingredients/new" for 127.0.0.1 at 2019-03-05 16:36:11 -0500
+Processing by IngredientsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering ingredients/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered ingredients/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 46ms (Views: 41.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 16:36:12 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 52ms (Views: 43.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-03-05 16:36:14 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 63ms (Views: 51.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-03-05 16:36:16 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 53ms (Views: 46.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2019-03-05 16:36:17 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 50ms (Views: 45.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2019-03-05 16:36:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 65ms (Views: 57.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2019-03-05 16:36:19 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=5):
+  
+app/controllers/users_controller.rb:9:in `show'
+Started GET "/ingredients/new" for 127.0.0.1 at 2019-03-05 16:38:02 -0500
+Processing by IngredientsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering ingredients/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered ingredients/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 54ms (Views: 49.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/ingredients" for 127.0.0.1 at 2019-03-05 16:38:05 -0500
+Processing by IngredientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fVd7LfdXZTcu+uaX4o3ju2dvGJExfuXkGDLpWxJL8+nkpaDIvJ+sXjdrg2UVXMpe5IqnP6e5hCauqbRHEqWNgQ==", "ingredient"=>{"name"=>"Eggs", "user_id"=>"4"}, "commit"=>"Create Ingredient"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "EGGS"], ["user_id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "EGGS"], ["user_id", 4], ["created_at", "2019-03-05 21:38:05.117941"], ["updated_at", "2019-03-05 21:38:05.117941"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND ("ingredients"."id" != ?) AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "EGGS"], ["id", 1], ["user_id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/ingredients/new
+Completed 302 Found in 29ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/ingredients/new" for 127.0.0.1 at 2019-03-05 16:38:05 -0500
+Processing by IngredientsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering ingredients/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered ingredients/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 16:38:06 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 44ms (Views: 36.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2019-03-05 16:38:23 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=5):
+  
+app/controllers/users_controller.rb:9:in `show'
+Started GET "/users/4" for 127.0.0.1 at 2019-03-05 16:38:26 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 47ms (Views: 40.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-05 17:17:29 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (0.8ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 95ms (Views: 94.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 17:17:30 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 42ms (Views: 40.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-05 17:17:34 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VRn/TLpJH1fkg65TlhOIGXrYd1dqrIVgK5ggOQt5skw+mpmbmZ+gK1jGtiGUxKYmuED4Hu22E2RNX6YXzxzs8w==", "username"=>"Eric", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Eric"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 98ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 17:17:34 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-05 17:17:39 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2CoSBroZqimlrqjNrsnERpuA+byAfLWPfx1w4gCGyGj9yf+omgjRxMuRbtpaUTg+wxC2QrK7Xk9ovEzBzkXXA==", "username"=>"Eric", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Eric"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 76ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 17:17:39 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 17:17:46 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 72ms (Views: 50.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 17:17:50 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 60ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ingredients/new" for 127.0.0.1 at 2019-03-05 17:17:54 -0500
+Processing by IngredientsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering ingredients/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered ingredients/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 52ms (Views: 45.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/ingredients" for 127.0.0.1 at 2019-03-05 17:17:56 -0500
+Processing by IngredientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J4ruwYSIl3BOpYJTp6cuqbCHQV0fvtY+w6U2VuUQRq6+eDUkz0BeGVc056FQdgdMM2L+84l5t/x1PmtK5f44xg==", "ingredient"=>{"name"=>"milk", "user_id"=>"4"}, "commit"=>"Create Ingredient"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "MILK"], ["user_id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "MILK"], ["user_id", 4], ["created_at", "2019-03-05 22:17:56.504907"], ["updated_at", "2019-03-05 22:17:56.504907"]]
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mIngredient Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND ("ingredients"."id" != ?) AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "MILK"], ["id", 2], ["user_id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/ingredients/new
+Completed 302 Found in 23ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/ingredients/new" for 127.0.0.1 at 2019-03-05 17:17:56 -0500
+Processing by IngredientsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering ingredients/new.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered ingredients/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "ingredients"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipe_ingredients"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "recipe_ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ingredient_id" integer, "recipe_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "username" varchar, "password_digest" varchar)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190305162331)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190304212504),
+(20190305161531),
+(20190304212610),
+(20190304212633),
+(20190304212528),
+(20190305161926);
+
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-03-05 22:20:18.702243"], ["updated_at", "2019-03-05 22:20:18.702243"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "ingredients"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipe_ingredients"[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "recipe_ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ingredient_id" integer, "recipe_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes"[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "username" varchar, "password_digest" varchar)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190305162331)[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190304212504),
+(20190305161531),
+(20190304212610),
+(20190304212633),
+(20190304212528),
+(20190305161926);
+
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-03-05 22:20:18.741315"], ["updated_at", "2019-03-05 22:20:18.741315"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-03-05 22:20:18.745674"], ["key", "environment"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2019-03-05 17:21:40 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (1.7ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 330ms (Views: 321.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 17:21:44 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 77ms (Views: 57.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 17:21:49 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T2PkJ6KqrvWCGZavFrfK5AENwyy14E2ZTlif4eIkXCl5bMXvmZkv+o1LCKVA8Q8sx3M0Lj1Fl3IJ2X2ihQXrtw==", "user"=>{"username"=>"Robert", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "username", "password_digest") VALUES (?, ?, ?, ?)[0m  [["created_at", "2019-03-05 22:21:50.070906"], ["updated_at", "2019-03-05 22:21:50.070906"], ["username", "Robert"], ["password_digest", "$2a$10$nF/ikTwB6XBYRw7wP25cpei6WQDVFU2Ae5WJacsCOWmk.rZ0zXlW2"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 86ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 17:21:50 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 53ms (Views: 32.2ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-03-05 17:21:55 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vzI3gJYlGh8FGKpLBNVBiKsyERFbtlA+ci2GHsum+7STpbg2LqVf8LCgVVNbByJ5SlBQLqN9T5FycwLuRJ33yQ=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 17:21:55 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-05 17:26:05 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (0.7ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 102ms (Views: 101.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 17:26:06 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 47ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 17:26:12 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a9krkUcKRgShN9kx8Kpvw2RPCgE2Idf8cQsjL/xncEdd1gpZfDnHC65lRzum7KoLojH9A76EDRc2isFsm0bH2Q==", "user"=>{"username"=>"Eric", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "username", "password_digest") VALUES (?, ?, ?, ?)[0m  [["created_at", "2019-03-05 22:26:13.022568"], ["updated_at", "2019-03-05 22:26:13.022568"], ["username", "Eric"], ["password_digest", "$2a$10$ZQDdPCYWKlazuYJZE5/sZ.JYCZAg5O0Z4X4GgauN9125Gf6a7AVJS"]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 89ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 17:26:13 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/views/users/index.html.erb:13: syntax error, unexpected ')', expecting =>
+...od: :delete, application_path );
+...                               ^
+/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/views/users/index.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/views/users/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/users/index.html.erb:13: syntax error, unexpected ')', expecting =>
+app/views/users/index.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/users/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users" for 127.0.0.1 at 2019-03-05 17:26:33 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (248.1ms)
+Completed 500 Internal Server Error in 260ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `application_path' for #<#<Class:0x007feddf373398>:0x007fede58e2bc0>):
+    10: <% end %>
+    11: <br>
+    12: <%= link_to "Add more items to Fridge!", new_ingredient_path %>
+    13: <%= button_to 'Logout', application_path, method: :delete %>
+  
+app/views/users/index.html.erb:13:in `_app_views_users_index_html_erb__2147080135539087460_70329867639540'
+Started GET "/users" for 127.0.0.1 at 2019-03-05 17:26:46 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (207.8ms)
+Completed 500 Internal Server Error in 221ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `applications_path' for #<#<Class:0x007feddf373398>:0x007fede0cc6e58>):
+    10: <% end %>
+    11: <br>
+    12: <%= link_to "Add more items to Fridge!", new_ingredient_path %>
+    13: <%= button_to 'Logout', applications_path, method: :delete %>
+  
+app/views/users/index.html.erb:13:in `_app_views_users_index_html_erb__2147080135539087460_70329827736660'
+Started GET "/users" for 127.0.0.1 at 2019-03-05 17:26:53 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 48ms (Views: 42.3ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-03-05 17:26:57 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KjfcKdT9gTSebKEPRIfKovLLmL8WNI/RKRwsMIouYioGoFOfbH3E2yvUXhcbValTE6nZgO7/kH4pQqjABRVuVw=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 17:26:57 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 48ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-05 17:27:17 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (2.3ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 72ms (Views: 70.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 17:27:29 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 41ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 17:27:58 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mIhs5SgFYdk5bPkqjBnil0rkp9YGxxTszG6yKOHPbpWuh00tEzbg1jY+ZyDaXydfjJpQ1I5izgeL71Brhu7ZCw==", "user"=>{"username"=>"Bill Gates", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "username", "password_digest") VALUES (?, ?, ?, ?)[0m  [["created_at", "2019-03-05 22:27:58.909064"], ["updated_at", "2019-03-05 22:27:58.909064"], ["username", "Bill Gates"], ["password_digest", "$2a$10$1AFplupVINkcqSKZj8rE9OWHHFkm/hizwEFCWjKM6KxFUEYb.Zrqu"]]
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 89ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 17:27:58 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 36ms (Views: 32.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-03-05 17:28:01 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Fej7Z7z51Gx3bPffOJ1PlrHfWNbUa8uwosASU2Gm90Y5f3TRBHmRg8LUCMdnTyxnUL0Z6Syg1B+inpaj7p37Ow=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 17:28:01 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 17:29:26 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-05 17:29:29 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 56ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 17:29:37 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 42ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 17:29:57 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AUJosna0hrO2hC6qnlRbgOvxYDZyqhSyefjC7wxNyAg3TUl6TYcHvLnWsKDIEp5ILY+XNPoPzlk+eSCsa2x/lg==", "user"=>{"username"=>"Tiger Woods ", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "username", "password_digest") VALUES (?, ?, ?, ?)[0m  [["created_at", "2019-03-05 22:29:57.917445"], ["updated_at", "2019-03-05 22:29:57.917445"], ["username", "Tiger Woods "], ["password_digest", "$2a$10$.y7Q1BP5w0olZN9X6P9vX.Tn3munEMNTRiv/gBGHlr.G2C5k62BgK"]]
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 89ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 17:29:57 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 45ms (Views: 40.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-03-05 17:29:59 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ef6IQNlNpUJAHjNe5grdqowu/2O/7I4hu7xaTTUYw1ZVaQf2Yc3grfWmzEa52L5bbUy+XEcnkY674t69uiPPKw=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 17:29:59 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-05 17:30:02 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (0.7ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 63ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-05 17:30:03 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 44ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-05 17:30:10 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ycApNQam9PaEBOSn5hFFKC5h34zvQS+RLf8okJyzsh3/zwj9PZV1+YtWeq2wV4Dg6B8ojmfk9XpqfsrT+5IFgw==", "user"=>{"username"=>"Elon Musk", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "username", "password_digest") VALUES (?, ?, ?, ?)[0m  [["created_at", "2019-03-05 22:30:10.615212"], ["updated_at", "2019-03-05 22:30:10.615212"], ["username", "Elon Musk"], ["password_digest", "$2a$10$IRDuJNWvd227QCA7CNj3veGipGbqpn1w8GNaBau0bMinvfhGP96va"]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 89ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 17:30:10 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 38ms (Views: 32.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2019-03-05 17:30:13 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eqdnfyWy5xLwx4vS/10FoT5SQYkzkeH4urpqOOLmP5tWMOjJnTKi/UV/dMqgj2ZQ3zAAtsta/le65O7Ibd0z5g=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-05 17:30:13 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "chicken"], ["user_id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "chicken"], ["user_id", 1], ["created_at", "2019-03-05 22:32:19.421548"], ["updated_at", "2019-03-05 22:32:19.421548"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "yogurt"], ["user_id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "yogurt"], ["user_id", 1], ["created_at", "2019-03-05 22:32:19.426875"], ["updated_at", "2019-03-05 22:32:19.426875"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "flour"], ["user_id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "flour"], ["user_id", 1], ["created_at", "2019-03-05 22:32:19.431160"], ["updated_at", "2019-03-05 22:32:19.431160"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "lettuce"], ["user_id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "lettuce"], ["user_id", 1], ["created_at", "2019-03-05 22:32:19.436164"], ["updated_at", "2019-03-05 22:32:19.436164"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "milk"], ["user_id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "milk"], ["user_id", 2], ["created_at", "2019-03-05 22:32:19.440640"], ["updated_at", "2019-03-05 22:32:19.440640"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "corn"], ["user_id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "corn"], ["user_id", 2], ["created_at", "2019-03-05 22:32:19.445039"], ["updated_at", "2019-03-05 22:32:19.445039"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "oatmeal"], ["user_id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "oatmeal"], ["user_id", 2], ["created_at", "2019-03-05 22:32:19.450680"], ["updated_at", "2019-03-05 22:32:19.450680"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "mushrooms"], ["user_id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "mushrooms"], ["user_id", 2], ["created_at", "2019-03-05 22:32:19.456514"], ["updated_at", "2019-03-05 22:32:19.456514"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "almonds"], ["user_id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "almonds"], ["user_id", 3], ["created_at", "2019-03-05 22:32:19.461833"], ["updated_at", "2019-03-05 22:32:19.461833"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "honey"], ["user_id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "honey"], ["user_id", 3], ["created_at", "2019-03-05 22:32:19.466042"], ["updated_at", "2019-03-05 22:32:19.466042"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "tomatoes"], ["user_id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "tomatoes"], ["user_id", 3], ["created_at", "2019-03-05 22:32:19.471003"], ["updated_at", "2019-03-05 22:32:19.471003"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "peas"], ["user_id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "peas"], ["user_id", 3], ["created_at", "2019-03-05 22:32:19.475580"], ["updated_at", "2019-03-05 22:32:19.475580"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "soy sauce"], ["user_id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "soy sauce"], ["user_id", 4], ["created_at", "2019-03-05 22:32:19.480068"], ["updated_at", "2019-03-05 22:32:19.480068"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "chocolate"], ["user_id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "chocolate"], ["user_id", 4], ["created_at", "2019-03-05 22:32:19.486619"], ["updated_at", "2019-03-05 22:32:19.486619"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "eggplants"], ["user_id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "eggplants"], ["user_id", 4], ["created_at", "2019-03-05 22:32:19.490923"], ["updated_at", "2019-03-05 22:32:19.490923"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "bananas"], ["user_id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "bananas"], ["user_id", 4], ["created_at", "2019-03-05 22:32:19.495508"], ["updated_at", "2019-03-05 22:32:19.495508"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "eggs"], ["user_id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "eggs"], ["user_id", 5], ["created_at", "2019-03-05 22:32:19.501418"], ["updated_at", "2019-03-05 22:32:19.501418"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "salmon"], ["user_id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "salmon"], ["user_id", 5], ["created_at", "2019-03-05 22:32:19.506779"], ["updated_at", "2019-03-05 22:32:19.506779"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "blueberries"], ["user_id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "blueberries"], ["user_id", 5], ["created_at", "2019-03-05 22:32:19.510933"], ["updated_at", "2019-03-05 22:32:19.510933"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mIngredient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "ingredients" WHERE "ingredients"."name" = ? AND "ingredients"."user_id" = ? LIMIT ?[0m  [["name", "olives"], ["user_id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "olives"], ["user_id", 5], ["created_at", "2019-03-05 22:32:19.516956"], ["updated_at", "2019-03-05 22:32:19.516956"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Fried Chicken Salad"], ["user_id", 1], ["created_at", "2019-03-05 22:32:19.538899"], ["updated_at", "2019-03-05 22:32:19.538899"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Oatmeal Mash"], ["user_id", 2], ["created_at", "2019-03-05 22:32:19.543126"], ["updated_at", "2019-03-05 22:32:19.543126"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Almond crusted tomatoes"], ["user_id", 3], ["created_at", "2019-03-05 22:32:19.546967"], ["updated_at", "2019-03-05 22:32:19.546967"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Chocolate Bananas"], ["user_id", 4], ["created_at", "2019-03-05 22:32:19.550932"], ["updated_at", "2019-03-05 22:32:19.550932"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Eggs Benedict"], ["user_id", 5], ["created_at", "2019-03-05 22:32:19.555745"], ["updated_at", "2019-03-05 22:32:19.555745"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("ingredient_id", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ingredient_id", 1], ["recipe_id", 1], ["created_at", "2019-03-05 22:32:19.573084"], ["updated_at", "2019-03-05 22:32:19.573084"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("ingredient_id", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ingredient_id", 3], ["recipe_id", 1], ["created_at", "2019-03-05 22:32:19.577789"], ["updated_at", "2019-03-05 22:32:19.577789"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("ingredient_id", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ingredient_id", 4], ["recipe_id", 1], ["created_at", "2019-03-05 22:32:19.582375"], ["updated_at", "2019-03-05 22:32:19.582375"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("ingredient_id", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ingredient_id", 5], ["recipe_id", 2], ["created_at", "2019-03-05 22:32:19.587625"], ["updated_at", "2019-03-05 22:32:19.587625"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("ingredient_id", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ingredient_id", 7], ["recipe_id", 2], ["created_at", "2019-03-05 22:32:19.592257"], ["updated_at", "2019-03-05 22:32:19.592257"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("ingredient_id", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ingredient_id", 6], ["recipe_id", 2], ["created_at", "2019-03-05 22:32:19.597309"], ["updated_at", "2019-03-05 22:32:19.597309"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("ingredient_id", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ingredient_id", 9], ["recipe_id", 3], ["created_at", "2019-03-05 22:32:19.603650"], ["updated_at", "2019-03-05 22:32:19.603650"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("ingredient_id", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ingredient_id", 10], ["recipe_id", 3], ["created_at", "2019-03-05 22:32:19.608231"], ["updated_at", "2019-03-05 22:32:19.608231"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("ingredient_id", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ingredient_id", 11], ["recipe_id", 3], ["created_at", "2019-03-05 22:32:19.613168"], ["updated_at", "2019-03-05 22:32:19.613168"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("ingredient_id", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ingredient_id", 14], ["recipe_id", 4], ["created_at", "2019-03-05 22:32:19.620787"], ["updated_at", "2019-03-05 22:32:19.620787"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("ingredient_id", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ingredient_id", 16], ["recipe_id", 4], ["created_at", "2019-03-05 22:32:19.625610"], ["updated_at", "2019-03-05 22:32:19.625610"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("ingredient_id", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ingredient_id", 17], ["recipe_id", 5], ["created_at", "2019-03-05 22:32:19.630016"], ["updated_at", "2019-03-05 22:32:19.630016"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "recipe_ingredients" ("ingredient_id", "recipe_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["ingredient_id", 18], ["recipe_id", 5], ["created_at", "2019-03-05 22:32:19.641787"], ["updated_at", "2019-03-05 22:32:19.641787"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/login" for 127.0.0.1 at 2019-03-05 17:33:10 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2mnHOp+TADlJ9HZ73ODCJ2eNCs0I50BT+UGNLG6fO432/kiMJxNF1vxMiWODMqHWhu9L8vAsX/z5Hwnc4aQ38A==", "username"=>"Robert", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Robert"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 102ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 17:33:10 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 268ms (Views: 251.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-03-05 17:33:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 60ms (Views: 46.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-03-05 17:33:41 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 50ms (Views: 44.4ms | ActiveRecord: 0.7ms)
+
+

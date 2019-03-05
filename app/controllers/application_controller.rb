@@ -22,10 +22,14 @@ class ApplicationController < ActionController::Base
     url = request.original_url
     if url == "http://localhost:3000/"
       index
-    elsif url == "http://localhost:3000/users/new"
-      new_user_path
-    else
-      redirect_to login_path unless logged_in?
+      if url == "http://localhost:3000/users/new"
+        new_user_path
+        if logged_in
+          redirect_to users_path
+        else
+          redirect_to login_path unless logged_in?
+        end
+      end
     end
   end
 end

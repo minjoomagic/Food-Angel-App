@@ -6,18 +6,16 @@ class IngredientsController < ApplicationController
   end
 
   def create
-    byebug
-    # @ingredient = Ingredient.create(ingredient_params)
-    @ingredient = Ingredient.create(name: params[:ingredient][:name].up, user_id: params[:ingredient][:user_id])
+    @ingredient = Ingredient.create(uppercased_ingredient_params)
     redirect_to new_ingredient_path
   end
 
-  # private
-  # def ingredient_params
-  #   params.require(:ingredient).permit(:name, :user_id)
-  # end
-  #
-  # def uppercased_ingredient_params
-  #   ingredient_params.merge({name: ingredient_params['name'].upcase!})
-  # end
+  private
+  def ingredient_params
+    params.require(:ingredient).permit(:name, :user_id)
+  end
+
+  def uppercased_ingredient_params
+    ingredient_params.merge({name: ingredient_params['name'].upcase!, user_id: ingredient_params['user_id']})
+  end
 end
