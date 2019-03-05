@@ -1,0 +1,6 @@
+<h1><%= @user.name %>'s Profile Page</h1>
+
+<h3>Favorite Recipes</h3>
+<% @recipes.each do |recipe| %>
+<%= recipe.name %>
+<% end %>
