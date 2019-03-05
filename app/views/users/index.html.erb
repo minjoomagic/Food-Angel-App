@@ -1,0 +1,12 @@
+<h1>Items currently in <%= @user.username %>'s fridge!</h1>
+<% if @ingredients == [] %>
+  <p>Your fridge is currently empty, <%= link_to "Click Here", new_ingredient_path %> to add to your fridge!</p>
+<% else %>
+<ul>
+  <% @ingredients.each do |food| %>
+  <li><%= food.name %></li>
+  <% end %>
+</ul>
+<% end %>
+<br>
+<%= link_to "Add more items to Fridge!", new_ingredient_path %>

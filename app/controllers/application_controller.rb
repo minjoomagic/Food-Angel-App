@@ -19,14 +19,13 @@ class ApplicationController < ActionController::Base
   end
 
   def authorized
-    logged_in?
-    # url = request.original_url
-    # if url == "http://localhost:3000/"
-    #   index
-    # elsif url == "http://localhost:3000/users/new"
-    #   new_user_path
-    # else
-    #   redirect_to login_path unless logged_in?
-    # end
+    url = request.original_url
+    if url == "http://localhost:3000/"
+      index
+    elsif url == "http://localhost:3000/users/new"
+      new_user_path
+    else
+      redirect_to login_path unless logged_in?
+    end
   end
 end

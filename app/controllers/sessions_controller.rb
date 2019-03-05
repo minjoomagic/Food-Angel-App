@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       # once we have found the user, create a new session for them
       session[:user_id] = @user.id
       # redirect_to user_path(@user)
-      redirect_to @user
+      redirect_to users_path
     else
       flash[:notice] = 'Invalid username or password'
       redirect_to login_path

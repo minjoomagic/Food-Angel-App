@@ -1,0 +1,21 @@
+<center><h1>Add Items to <%= @user.username %>'s Fridge!</h1></center>
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+  <% elsif flash[:error] %>
+  <% flash[:error].each do |error| %>
+  <%= error %>
+  <% end %>
+<% end %>
+<ul>
+<% @ingredients.each do |food| %>
+<li><%= food.name %></li>
+<% end %>
+</ul>
+<%= form_for @ingredient do |f| %>
+  <%= f.label "Add an item to your fridge" %>
+  <%= f.text_field :name %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.submit %>
+<% end %>
+<br>
+<%= link_to "Go to Fridge!", users_path %>
