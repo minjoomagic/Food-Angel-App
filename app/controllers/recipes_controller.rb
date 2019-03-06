@@ -25,9 +25,12 @@ class RecipesController < ApplicationController
     response = RestClient.get(url)
     results = JSON.parse(response.body)["results"]
     if results && results.length > 1
-      results.map do |recipes|
-        byebug
+      @recipe_array = []
+      results[0..5].map do |recipes|
+        @recipe_array << recipes
       end
+      @recipe_array
+      render :index
     end
         # title href ingredients thumbnail
 

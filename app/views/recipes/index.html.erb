@@ -1,6 +1,9 @@
 <h1>Recipes</h1>
 <ul>
-<% @final_array.each do |recipe| %>
-<li><%= recipe.name %></li>
+<% @recipe_array.each do |recipe| %>
+<li><%= link_to recipe['title'], recipe['href'] %></li>
+  <ul>
+    <li><%= recipe['ingredients'] %></li>
+  </ul>
 <% end %>
 </ul>

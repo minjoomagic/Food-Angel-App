@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :authorized, only: [:new, :create]
+  before_action :custom_auth, only: :show
 
   def index
     @user = User.find(current_user.id)
@@ -37,5 +38,13 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:username, :password)
+  end
+
+  def custom_auth
+    @user = User.find(params[:id])
+    if current_user.id != @user.id
+      flash[:notice] = "You can only view your page"
+      redirect_to current_user
+    end
   end
 end
