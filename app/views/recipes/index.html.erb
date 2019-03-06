@@ -1,9 +1,12 @@
 <h1>Recipes</h1>
 <ul>
 <% @recipe_array.each do |recipe| %>
-<li><%= link_to recipe['title'], recipe['href'] %></li>
+<li><%= link_to recipe['title'], recipe['href'], target: :_blank %></li>
   <ul>
     <li><%= recipe['ingredients'] %></li>
   </ul>
 <% end %>
 </ul>
+
+
+<%= link_to 'Back to my Fridge', users_path %>

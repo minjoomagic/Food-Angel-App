@@ -2,9 +2,14 @@
 
 <% if flash[:notice] %>
 <h3><i>Error: <%= flash[:notice] %></i></h3>
+<img src="https://media.giphy.com/media/muKS0FZTV8Ih2/giphy.gif">
 <% end %>
 
 <h3>Favorite Recipes</h3>
 <% @recipes.each do |recipe| %>
 <%= recipe.name %>
 <% end %>
+
+<br>
+<br>
+<%= link_to 'Go Back to my Fridge', users_path %>
