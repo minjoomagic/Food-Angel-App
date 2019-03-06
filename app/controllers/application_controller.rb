@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :authorized #lock down this whole app
+  skip_before_action :authorized, only: :index
   helper_method :current_user #i can call current_user from a view
   protect_from_forgery with: :exception
 
@@ -19,17 +20,6 @@ class ApplicationController < ActionController::Base
   end
 
   def authorized
-    url = request.original_url
-    if url == "http://localhost:3000/"
-      index
-      if url == "http://localhost:3000/users/new"
-        new_user_path
-        if logged_in
-          redirect_to users_path
-        else
-          redirect_to login_path unless logged_in?
-        end
-      end
-    end
+    redirect_to login_path unless logged_in?
   end
 end

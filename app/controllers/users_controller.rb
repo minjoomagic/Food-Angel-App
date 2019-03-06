@@ -1,8 +1,13 @@
 class UsersController < ApplicationController
+  skip_before_action :authorized, only: [:new, :create]
 
   def index
-    @ingredients = Ingredient.where(user_id: current_user.id)
     @user = User.find(current_user.id)
+    @ingredients = Ingredient.where(user_id: current_user.id)
+    @ingredients_array = []
+    @ingredients.each do |food|
+      @ingredients_array << food.name
+    end
   end
 
   def show
@@ -28,11 +33,9 @@ class UsersController < ApplicationController
   end
 
 
-    private
+  private
 
-    def user_params
-      params.require(:user).permit(:username, :password)
-    end
-
-
+  def user_params
+    params.require(:user).permit(:username, :password)
+  end
 end

@@ -20437,3 +20437,1753 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 35ms (Views: 34.9ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/login" for 127.0.0.1 at 2019-03-05 17:39:10 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xj5bvsKTMf9afdRiHf5YUb+PHnMj6T+NIWp4ppy40qnqqdQIehN0EO/FK3pCLDugXu1fTNsiICIhNPxWE4Pe1A==", "username"=>"Robert", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Robert"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 104ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-05 17:39:11 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 281ms (Views: 254.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-06 09:41:15 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (1.9ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 338ms (Views: 328.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-06 09:41:17 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-06 09:41:21 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W+QV816cZELgLl1ZhXNHNrJfs/CedlosCf6RqawyjI6H+RYhmHujffGTweWZZ1WGQ/nPI4T0de5350YH6JsENA==", "username"=>"Eric", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Eric"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 104ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-06 09:41:21 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (7.8ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 11]]
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (190602.6ms)
+Completed 200 OK in 190689ms (Views: 190666.1ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-06 11:22:18 -0500
+Started GET "/" for 127.0.0.1 at 2019-03-06 11:22:18 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#index as HTML
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (2.1ms)
+  Rendered application/index.html.erb within layouts/application (0.2ms)
+Started GET "/" for 127.0.0.1 at 2019-03-06 11:22:19 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (2.0ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 224ms (Views: 223.5ms | ActiveRecord: 0.0ms)
+
+
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 739ms (Views: 736.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 751ms (Views: 738.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-06 11:22:21 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 63ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-06 11:22:23 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qn34GXyp9bWTeY4ClQEpYngRFGwsV6W4qKITRqpDetSeYPvLuk4yioLEEr6JFTvSibdovzbVinrWu8To7urybg==", "username"=>"Eric", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Eric"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 104ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-06 11:22:23 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (7816.5ms)
+Completed 200 OK in 7877ms (Views: 7863.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-06 11:22:56 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (1.6ms)
+Started GET "/users" for 127.0.0.1 at 2019-03-06 11:22:57 -0500
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 410ms (Views: 401.9ms | ActiveRecord: 0.0ms)
+
+
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 105ms (Views: 54.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-06 11:22:57 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 47ms (Views: 41.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:23:01 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 68ms (Views: 43.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:23:43 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 81ms (Views: 73.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:24:08 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ? LIMIT ?[0m  [["ingredient_id", 5], ["LIMIT", 11]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ? LIMIT ?[0m  [["ingredient_id", 6], ["LIMIT", 11]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ? LIMIT ?[0m  [["ingredient_id", 7], ["LIMIT", 11]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ? LIMIT ?[0m  [["ingredient_id", 8], ["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ? LIMIT ?[0m  [["ingredient_id", 6], ["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ? LIMIT ?[0m  [["ingredient_id", 7], ["LIMIT", 11]]
+  [1m[36mCACHE Recipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ? LIMIT ?[0m  [["ingredient_id", 8], ["LIMIT", 11]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  Rendered recipes/index.html.erb within layouts/application (251290.7ms)
+Completed 200 OK in 251348ms (Views: 251340.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:28:44 -0500
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:28:44 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipesController#index as HTML
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 2.4ms)
+
+
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.5ms)
+
+
+  
+  
+NoMethodError (undefined method `<<' for nil:NilClass):
+NoMethodError (undefined method `<<' for nil:NilClass):
+  
+  
+app/controllers/recipes_controller.rb:5:in `block in index'
+app/controllers/recipes_controller.rb:4:in `index'
+app/controllers/recipes_controller.rb:5:in `block in index'
+app/controllers/recipes_controller.rb:4:in `index'
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:28:44 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `<<' for nil:NilClass):
+  
+app/controllers/recipes_controller.rb:5:in `block in index'
+app/controllers/recipes_controller.rb:4:in `index'
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:29:08 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering recipes/index.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ? LIMIT ?[0m  [["ingredient_id", 5], ["LIMIT", 11]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ? LIMIT ?[0m  [["ingredient_id", 6], ["LIMIT", 11]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ? LIMIT ?[0m  [["ingredient_id", 7], ["LIMIT", 11]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ? LIMIT ?[0m  [["ingredient_id", 8], ["LIMIT", 11]]
+  Rendered recipes/index.html.erb within layouts/application (48104.6ms)
+Completed 200 OK in 48383ms (Views: 48348.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:30:09 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (23260.2ms)
+Completed 200 OK in 23386ms (Views: 23309.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:30:37 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (20318.2ms)
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:30:58 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 20454ms (Views: 20443.8ms | ActiveRecord: 0.8ms)
+
+
+Completed 200 OK in 152ms (Views: 97.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:31:00 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 57ms (Views: 43.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:31:47 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 87ms (Views: 37.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-06 11:54:08 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (1.6ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 293ms (Views: 284.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-06 11:54:10 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-06 11:54:12 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W98W7Y7ohYQH71tQHuGg8kdfTij6Z9efhSWWxDG+K+mHwhU/SA9CuxZSx+wC9bJCtvky++Dl+F37PEFqdRejUw==", "username"=>"Eric", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Eric"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 99ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-06 11:54:12 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 53ms (Views: 37.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:54:15 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+Completed 500 Internal Server Error in 339ms (ActiveRecord: 5.2ms)
+
+
+  
+RestClient::InternalServerError (500 Internal Server Error):
+  
+app/controllers/recipes_controller.rb:11:in `index'
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:55:16 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:56:16 -0500
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 60197ms (Views: 50.7ms | ActiveRecord: 3.4ms)
+
+
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+Started PUT "/__web_console/repl_sessions/794a838816f875f6de5e1c2dfb8d2020" for 127.0.0.1 at 2019-03-06 11:57:22 -0500
+Started PUT "/__web_console/repl_sessions/794a838816f875f6de5e1c2dfb8d2020" for 127.0.0.1 at 2019-03-06 11:57:22 -0500
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:57:22 -0500
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 66372ms (Views: 61.5ms | ActiveRecord: 4.7ms)
+
+
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 6.4ms)
+
+
+  
+NoMethodError (undefined method `each' for <RestClient::Response 200 "{\"title\":\"R...">:RestClient::Response):
+  
+app/controllers/recipes_controller.rb:14:in `index'
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:57:26 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 3.4ms)
+
+
+  
+NoMethodError (undefined method `each' for <RestClient::Response 200 "{\"title\":\"R...">:RestClient::Response):
+  
+app/controllers/recipes_controller.rb:14:in `index'
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:57:40 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 3.2ms)
+
+
+  
+NoMethodError (undefined method `each' for <RestClient::Response 200 "{\"title\":\"R...">:RestClient::Response):
+  
+app/controllers/recipes_controller.rb:14:in `index'
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 11:57:54 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 82ms (Views: 34.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 12:06:33 -0500
+  
+SyntaxError (/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/controllers/recipes_controller.rb:12: syntax error, unexpected '\n', expecting =>):
+  
+app/controllers/recipes_controller.rb:12: syntax error, unexpected '\n', expecting =>
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 12:07:18 -0500
+  
+LoadError (cannot load such file -- http):
+  
+app/controllers/recipes_controller.rb:4:in `<class:RecipesController>'
+app/controllers/recipes_controller.rb:1:in `<top (required)>'
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 12:07:28 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 85ms (Views: 35.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 12:07:48 -0500
+  
+SyntaxError (/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/controllers/recipes_controller.rb:17: syntax error, unexpected '<', expecting keyword_end
+  <%= button_to "search", search %>
+   ^
+/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/controllers/recipes_controller.rb:20: syntax error, unexpected tCONSTANT, expecting keyword_end
+    ingredients = Ingredient.where(user_id: current_user.id)
+                            ^
+/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/controllers/recipes_controller.rb:27: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/recipes_controller.rb:17: syntax error, unexpected '<', expecting keyword_end
+app/controllers/recipes_controller.rb:20: syntax error, unexpected tCONSTANT, expecting keyword_end
+app/controllers/recipes_controller.rb:27: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 12:08:04 -0500
+  
+SyntaxError (/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/controllers/recipes_controller.rb:17: syntax error, unexpected '<', expecting keyword_end
+  <%= button_to "search", search_path %>
+   ^
+/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/controllers/recipes_controller.rb:20: syntax error, unexpected tCONSTANT, expecting keyword_end
+    ingredients = Ingredient.where(user_id: current_user.id)
+                            ^
+/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/controllers/recipes_controller.rb:27: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/recipes_controller.rb:17: syntax error, unexpected '<', expecting keyword_end
+app/controllers/recipes_controller.rb:20: syntax error, unexpected tCONSTANT, expecting keyword_end
+app/controllers/recipes_controller.rb:27: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 12:08:15 -0500
+  
+SyntaxError (/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/controllers/recipes_controller.rb:17: syntax error, unexpected '<', expecting keyword_end
+  <%= button_to "search" %>
+   ^
+/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/controllers/recipes_controller.rb:20: syntax error, unexpected tCONSTANT, expecting keyword_end
+    ingredients = Ingredient.where(user_id: current_user.id)
+                            ^
+/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/controllers/recipes_controller.rb:27: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/recipes_controller.rb:17: syntax error, unexpected '<', expecting keyword_end
+app/controllers/recipes_controller.rb:20: syntax error, unexpected tCONSTANT, expecting keyword_end
+app/controllers/recipes_controller.rb:27: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 12:08:48 -0500
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `get' for HTTP:Module
+Did you mean?  gets
+               gem):
+  
+app/controllers/recipes_controller.rb:17:in `index'
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 12:09:05 -0500
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+
+  
+NoMethodError (undefined method `get' for JSON:Module
+Did you mean?  gets
+               gem):
+  
+app/controllers/recipes_controller.rb:17:in `index'
+Started GET "/" for 127.0.0.1 at 2019-03-06 14:02:47 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#index as HTML
+Started GET "/" for 127.0.0.1 at 2019-03-06 14:02:47 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (2.2ms)
+  Rendered application/index.html.erb within layouts/application (1.5ms)
+Filter chain halted as :authorized rendered or redirected
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 534ms (Views: 532.4ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 584ms (Views: 575.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-06 14:02:49 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 61ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-06 14:02:52 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7SLyZrAdATBR0BR/a5wx5OsHy2meIoAEOOp/j0AGPVYxP/G0dvrGD0BtiMN3iCNUGqG3uoSgr8ZG86ghBK+17A==", "username"=>"Eric", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Eric"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 102ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:02:52 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 57ms (Views: 38.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:10:13 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 4.1ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"api_request", :application=>[#<Recipe id: 2, name: "Oatmeal Mash", user_id: 2, created_at: "2019-03-05 22:32:19", updated_at: "2019-03-05 22:32:19">], :controller=>"users", :search_term=>[#<Recipe id: 2, name: "Oatmeal Mash", user_id: 2, created_at: "2019-03-05 22:32:19", updated_at: "2019-03-05 22:32:19">]}):
+    10: <% end %>
+    11: <br>
+    12: <%= link_to "Add more items to Fridge!", new_ingredient_path %>
+    13: <%= link_to "Show me the recipes!", {:application => @final_array, action: :api_request, search_term: @final_array}  %>
+    14: <%= button_to 'Logout', logout_path, method: :delete %>
+  
+app/views/users/index.html.erb:13:in `_app_views_users_index_html_erb___125239438652767694_70257040065960'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:11:10 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"api_request", :application=>nil, :controller=>"users", :search_term=>#<ActiveRecord::Relation [#<Ingredient id: 5, name: "milk", user_id: 2, created_at: "2019-03-05 22:32:19", updated_at: "2019-03-05 22:32:19">, #<Ingredient id: 6, name: "corn", user_id: 2, created_at: "2019-03-05 22:32:19", updated_at: "2019-03-05 22:32:19">, #<Ingredient id: 7, name: "oatmeal", user_id: 2, created_at: "2019-03-05 22:32:19", updated_at: "2019-03-05 22:32:19">, #<Ingredient id: 8, name: "mushrooms", user_id: 2, created_at: "2019-03-05 22:32:19", updated_at: "2019-03-05 22:32:19">]>}):
+    10: <% end %>
+    11: <br>
+    12: <%= link_to "Add more items to Fridge!", new_ingredient_path %>
+    13: <%= link_to "Show me the recipes!", {:application => @final_array, action: :api_request, search_term: @ingredients}  %>
+    14: <%= button_to 'Logout', logout_path, method: :delete %>
+  
+app/views/users/index.html.erb:13:in `_app_views_users_index_html_erb___125239438652767694_70257067045200'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:11:16 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"api_request", :application=>nil, :controller=>"users", :search_term=>"Ingredient"}):
+    10: <% end %>
+    11: <br>
+    12: <%= link_to "Add more items to Fridge!", new_ingredient_path %>
+    13: <%= link_to "Show me the recipes!", {:application => @final_array, action: :api_request, search_term: @ingredients.name}  %>
+    14: <%= button_to 'Logout', logout_path, method: :delete %>
+  
+app/views/users/index.html.erb:13:in `_app_views_users_index_html_erb___125239438652767694_70257054435380'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:11:34 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"api_request", :application=>"Ingredient", :controller=>"users", :search_term=>"Ingredient"}):
+    10: <% end %>
+    11: <br>
+    12: <%= link_to "Add more items to Fridge!", new_ingredient_path %>
+    13: <%= link_to "Show me the recipes!", {:application => @ingredients.name, action: :api_request, search_term: @ingredients.name}  %>
+    14: <%= button_to 'Logout', logout_path, method: :delete %>
+  
+app/views/users/index.html.erb:13:in `_app_views_users_index_html_erb___125239438652767694_70256988343200'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:12:06 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"api_request", :application=>"milk", :controller=>"users", :search_term=>"milk"}):
+    11: <br>
+    12: <%= link_to "Add more items to Fridge!", new_ingredient_path %>
+    13: <% @ingredients.each do |food| %>
+    14: <%= link_to "Show me the recipes!", {:application => food.name, action: :api_request, search_term: food.name}  %>
+    15: <% end %>
+    16: <%= button_to 'Logout', logout_path, method: :delete %>
+  
+app/views/users/index.html.erb:14:in `block in _app_views_users_index_html_erb___125239438652767694_70257029285140'
+app/views/users/index.html.erb:13:in `_app_views_users_index_html_erb___125239438652767694_70257029285140'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:16:12 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"api_request", :application=>"milk", :controller=>"users", :search_term=>"milk"}):
+    11: <br>
+    12: <%= link_to "Add more items to Fridge!", new_ingredient_path %>
+    13: <% @ingredients.each do |food| %>
+    14: <%= link_to "Show me the recipes!", {:application => food.name, action: :api_request, search_term: food.name}  %>
+    15: <% end %>
+    16: <%= button_to 'Logout', logout_path, method: :delete %>
+  
+app/views/users/index.html.erb:14:in `block in _app_views_users_index_html_erb___125239438652767694_70257051580020'
+app/views/users/index.html.erb:13:in `_app_views_users_index_html_erb___125239438652767694_70257051580020'
+Started GET "/" for 127.0.0.1 at 2019-03-06 14:16:15 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (1.1ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 74ms (Views: 73.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-06 14:16:16 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-06 14:16:23 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S2PnO5dYPZaERDP1/d0mRtwYkuNJpaKTQBu5v7P+YOOXfuTpUb/6qZX5r0nhyTT2Lb7uMFMnjVE+Am4R91foWQ==", "username"=>"Eric", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Eric"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 81ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:16:23 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"api_request", :application=>"milk", :controller=>"users", :search_term=>"milk"}):
+    11: <br>
+    12: <%= link_to "Add more items to Fridge!", new_ingredient_path %>
+    13: <% @ingredients.each do |food| %>
+    14: <%= link_to "Show me the recipes!", {:application => food.name, action: :api_request, search_term: food.name}  %>
+    15: <% end %>
+    16: <%= button_to 'Logout', logout_path, method: :delete %>
+  
+app/views/users/index.html.erb:14:in `block in _app_views_users_index_html_erb___125239438652767694_70257023091340'
+app/views/users/index.html.erb:13:in `_app_views_users_index_html_erb___125239438652767694_70257023091340'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:16:35 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 49ms (Views: 41.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:21:59 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 78ms (Views: 53.2ms | ActiveRecord: 2.2ms)
+
+
+Started PUT "/recipe/search" for 127.0.0.1 at 2019-03-06 14:22:06 -0500
+Processing by ApplicationController#api_request as HTML
+  Parameters: {"authenticity_token"=>"2/XaRZ10Y/NBXKXkHaGMPrEMRnd2D1Ez0DbenZ6epAcxlVJXC9eAUqMteEyD0UZaBjg/P5fEF8503e/wm8Hw9A=="}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:36:in `api_request'
+Started PUT "/recipe/search" for 127.0.0.1 at 2019-03-06 14:22:18 -0500
+Processing by ApplicationController#api_request as HTML
+  Parameters: {"authenticity_token"=>"2/XaRZ10Y/NBXKXkHaGMPrEMRnd2D1Ez0DbenZ6epAcxlVJXC9eAUqMteEyD0UZaBjg/P5fEF8503e/wm8Hw9A=="}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:36:in `api_request'
+Started PUT "/recipe/search" for 127.0.0.1 at 2019-03-06 14:22:44 -0500
+Processing by ApplicationController#api_request as HTML
+  Parameters: {"authenticity_token"=>"2/XaRZ10Y/NBXKXkHaGMPrEMRnd2D1Ez0DbenZ6epAcxlVJXC9eAUqMteEyD0UZaBjg/P5fEF8503e/wm8Hw9A=="}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:36:in `api_request'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:26:27 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 45ms (Views: 37.2ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/recipe/search" for 127.0.0.1 at 2019-03-06 14:26:29 -0500
+Processing by ApplicationController#api_request as HTML
+  Parameters: {"authenticity_token"=>"9S7TQtLO8hTcb3shCnM79syLeZAJjVrhlyu0whgKZikfTltQRG0RtT4epomUA/GSe78A2OhGHBwzwIWvHVUy2g=="}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:36:in `api_request'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:28:05 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 82ms (Views: 43.0ms | ActiveRecord: 2.2ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:28:07 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"9GbuAsSVmuRMgicuJ/BevYyvslupyX7s8uMzkAc6ya0eBmYQUjZ5Ra7z+oa5gJTZO5vLE0gCOBFWCAL9AmWdXg=="}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:36:in `api_request'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:29:07 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 66ms (Views: 35.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:29:25 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 45ms (Views: 37.0ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:29:25 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"gyIxhvTnLhrOd1XAjv9vf6uBsiTAHkkCCN4NPv8BTjFpQrmUYkTNuywGiGgQj6UbHLXLbCHVD/+sNTxT+l4awg=="}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:36:in `api_request'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:31:00 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 71ms (Views: 43.8ms | ActiveRecord: 1.9ms)
+
+
+Started PUT "/recipe/search/?i=milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:31:00 -0500
+  
+ActionController::RoutingError (No route matches [PUT] "/recipe/search"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:31:29 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 310ms (Views: 260.8ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/recipe/search/?i=milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:31:31 -0500
+  
+ActionController::RoutingError (No route matches [PUT] "/recipe/search"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:31:57 -0500
+Started PUT "/recipe/search/?i=milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:32:08 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (1.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 350ms (Views: 146.7ms | ActiveRecord: 7.6ms)
+
+
+  
+ActionController::RoutingError (No route matches [PUT] "/recipe/search"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:36:04 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 212ms (Views: 129.8ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:36:05 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 126ms (Views: 111.9ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:36:07 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"l+XTFFFwwEdQSLV/FDpxcPPzoDbyCQvupE4Pxx6BqRJ9hVsGx9Mj5rI5aNeKSrsURMfZfhPCTRMApT6qG9794Q=="}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:36:in `api_request'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:36:41 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 63ms (Views: 36.8ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:36:43 -0500
+  
+AbstractController::ActionNotFound (The action 'api_request(search_term)' could not be found for ApplicationController):
+  
+actionpack (5.1.6.1) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.6.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:36:58 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"2mA4DaqYjGZ99GrXRK/BPpESv/JFpl6r76yYoBKwfAwwALAfPDtvx5+Ft3/a3wtaJibGuqRtGFZLR6nNF+8o/w=="}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:36:in `api_request'
+Started PUT "/__web_console/repl_sessions/369363ecb5a316f39dbce20ccec53ec9" for 127.0.0.1 at 2019-03-06 14:37:10 -0500
+Started PUT "/__web_console/repl_sessions/369363ecb5a316f39dbce20ccec53ec9" for 127.0.0.1 at 2019-03-06 14:37:12 -0500
+Started PUT "/__web_console/repl_sessions/369363ecb5a316f39dbce20ccec53ec9" for 127.0.0.1 at 2019-03-06 14:37:19 -0500
+Started PUT "/__web_console/repl_sessions/369363ecb5a316f39dbce20ccec53ec9" for 127.0.0.1 at 2019-03-06 14:37:30 -0500
+Started PUT "/__web_console/repl_sessions/369363ecb5a316f39dbce20ccec53ec9" for 127.0.0.1 at 2019-03-06 14:37:37 -0500
+Started PUT "/__web_console/repl_sessions/369363ecb5a316f39dbce20ccec53ec9" for 127.0.0.1 at 2019-03-06 14:37:45 -0500
+Started PUT "/__web_console/repl_sessions/369363ecb5a316f39dbce20ccec53ec9" for 127.0.0.1 at 2019-03-06 14:37:46 -0500
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:37:56 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.9ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 6.2ms)
+
+
+  
+ActionView::Template::Error (unable to convert unpermitted parameters to hash):
+    10: <% end %>
+    11: <br>
+    12: <%= link_to "Add more items to Fridge!", new_ingredient_path %>
+    13: <%= link_to "Show me the recipes!", search_path(params), method: :put %>
+    14: <%= button_to 'Logout', logout_path, method: :delete %>
+  
+app/views/users/index.html.erb:13:in `_app_views_users_index_html_erb___1522583625073800795_70335283242760'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:38:11 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 46ms (Views: 39.2ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:38:12 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"4+vlnOTmPLt1VE00Cb6sDXrnT0HNsly4yP+ClTfn5XAJi22OckXfGpclkJyXzmZpzdM2CSx5GkVsFLP4Mrixgw=="}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:36:in `api_request'
+Started PUT "/__web_console/repl_sessions/9260888c65ec865049b9fafd942e8816" for 127.0.0.1 at 2019-03-06 14:38:14 -0500
+Started PUT "/__web_console/repl_sessions/9260888c65ec865049b9fafd942e8816" for 127.0.0.1 at 2019-03-06 14:38:15 -0500
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:39:03 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 62ms (Views: 35.6ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:39:04 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"0xaobWAWRFqG9+bcOYqyIYyKV6chtu9vXDvX7uCCbyQ5diB/9rWn+2SGO3Sn+nhFO74u78B9qZL40OaD5d071w=="}
+Completed 500 Internal Server Error in 223780ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-06 14:42:48 -0500
+  
+NameError (undefined local variable or method `search_term' for #<ApplicationController:0x007ff06762aa48>
+Did you mean?  search_url):
+  
+app/controllers/application_controller.rb:38:in `api_request'
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 70ms (Views: 69.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-06 14:42:50 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (1.0ms)
+Filter chain halted as :authorized rendered or redirected
+Completed 200 OK in 68ms (Views: 66.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-06 14:42:52 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 51ms (Views: 50.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-06 14:42:54 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4TndT8DsXqxF+kycoqdQgz1sGCc2b6w9dexS7p0U3dI9JN6dBguZk1RH0CC+s0IzzMpk9Cztg/8L9YVA2b1VaA==", "username"=>"Eric", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Eric"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 92ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:42:54 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 58ms (Views: 34.5ms | ActiveRecord: 1.3ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:42:56 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"d6nsRyLPhKYYIkBO8BF0nP5iL7SuTgMBDspSKcPBpnWdyWRVtGxnB/pTneZuYb74SVZW/E+FRfyqIWNExp7yhg=="}
+Completed 500 Internal Server Error in 31876ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `search_term' for #<ApplicationController:0x007ff0676018a0>
+Did you mean?  search_url):
+  
+app/controllers/application_controller.rb:40:in `api_request'
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:43:31 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"d6nsRyLPhKYYIkBO8BF0nP5iL7SuTgMBDspSKcPBpnWdyWRVtGxnB/pTneZuYb74SVZW/E+FRfyqIWNExp7yhg=="}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/controllers/application_controller.rb:38:in `slice'
+app/controllers/application_controller.rb:38:in `api_request'
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:48:43 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"d6nsRyLPhKYYIkBO8BF0nP5iL7SuTgMBDspSKcPBpnWdyWRVtGxnB/pTneZuYb74SVZW/E+FRfyqIWNExp7yhg=="}
+Completed 500 Internal Server Error in 132783ms
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/application_controller.rb:49:in `block in api_request'
+app/controllers/application_controller.rb:48:in `each'
+app/controllers/application_controller.rb:48:in `each_with_index'
+app/controllers/application_controller.rb:48:in `api_request'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:50:58 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 80ms (Views: 43.5ms | ActiveRecord: 2.9ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:50:59 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"hbIonH+yagUXOUPY4BMQXpXJOJizIg/W/h1Dkm54lkhv0qCO6RGJpPVInnB+Y9o6Iv1B0FLpSSta9nL/ayfCuw=="}
+Completed 500 Internal Server Error in 74846ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `url_safe_search_term' for #<ApplicationController:0x007ff06a3cd068>):
+  
+app/controllers/application_controller.rb:48:in `api_request'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:52:17 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 69ms (Views: 38.2ms | ActiveRecord: 2.2ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:52:19 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"iUYCsistTiQzc8jOpKEdyqOGs74hO6hwBji50vcwv3BjJoqgvY6thdECFWY60deuFLLK9sDw7o2i04i/8m/rgw=="}
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `url_safe_search_term' for #<ApplicationController:0x007ff06a489790>):
+  
+app/controllers/application_controller.rb:42:in `split_array'
+app/controllers/application_controller.rb:46:in `api_request'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:52:48 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 156ms (Views: 112.0ms | ActiveRecord: 5.3ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:52:49 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"2wlOUz9cc9uYVE75lZq170PNp3/oQoHjiKyNZoSY3XExacZBqf+Qenolk1EL6n+L9PneNwmJxx4sR7wLgceJgg=="}
+Completed 500 Internal Server Error in 77886ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `url_safe_search_term' for #<ApplicationController:0x007ff06b1bed48>):
+  
+app/controllers/application_controller.rb:47:in `api_request'
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:54:13 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"2wlOUz9cc9uYVE75lZq170PNp3/oQoHjiKyNZoSY3XExacZBqf+Qenolk1EL6n+L9PneNwmJxx4sR7wLgceJgg=="}
+Completed 500 Internal Server Error in 152821ms
+
+
+  
+NameError (undefined local variable or method `url_safe_search_term' for #<ApplicationController:0x007ff06be414a8>):
+  
+app/controllers/application_controller.rb:47:in `api_request'
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:56:51 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"2wlOUz9cc9uYVE75lZq170PNp3/oQoHjiKyNZoSY3XExacZBqf+Qenolk1EL6n+L9PneNwmJxx4sR7wLgceJgg=="}
+Completed 500 Internal Server Error in 30632ms
+
+
+  
+NameError (undefined local variable or method `url_safe_search_term' for #<ApplicationController:0x007ff0679e9260>):
+  
+app/controllers/application_controller.rb:48:in `api_request'
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:57:24 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"2wlOUz9cc9uYVE75lZq170PNp3/oQoHjiKyNZoSY3XExacZBqf+Qenolk1EL6n+L9PneNwmJxx4sR7wLgceJgg=="}
+Completed 500 Internal Server Error in 72286ms
+
+
+  
+NameError (undefined local variable or method `url_safe_search_term' for #<ApplicationController:0x007ff06a605c68>):
+  
+app/controllers/application_controller.rb:48:in `api_request'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:58:43 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 61ms (Views: 32.7ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:58:44 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"h5fG5NWY5Lhj2UbYQvCq9eWWgTUeF05LL6VqzZWE635t9072QzsHGYGom3DcgGCRUqL4ff/cCLaLTlugkNu/jQ=="}
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `term' for #<ApplicationController:0x007ff06b247490>):
+  
+app/controllers/application_controller.rb:47:in `api_request'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 14:58:59 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 68ms (Views: 38.5ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 14:58:59 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"bGK239UwMx9wY/jdbUiHElX9Y0RV/QPxGPKePicFEGWGAj7NQ5PQvpISJXXzOE124skaDLQ2RQy8Ga9TIlpElg=="}
+Completed 500 Internal Server Error in 722261ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/application_controller.rb:54:in `block in api_request'
+app/controllers/application_controller.rb:53:in `each'
+app/controllers/application_controller.rb:53:in `each_with_index'
+app/controllers/application_controller.rb:53:in `api_request'
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 15:11:05 -0500
+  
+SyntaxError (/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/controllers/application_controller.rb:74: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/application_controller.rb:74: syntax error, unexpected end-of-input, expecting keyword_end
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 15:11:14 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"bGK239UwMx9wY/jdbUiHElX9Y0RV/QPxGPKePicFEGWGAj7NQ5PQvpISJXXzOE124skaDLQ2RQy8Ga9TIlpElg=="}
+Started GET "/recipe/" for 127.0.0.1 at 2019-03-06 15:14:28 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/recipe"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/recipes" for 127.0.0.1 at 2019-03-06 15:14:31 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.6ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 5]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 6]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 7]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" INNER JOIN "recipe_ingredients" ON "recipes"."id" = "recipe_ingredients"."recipe_id" WHERE "recipe_ingredients"."ingredient_id" = ?[0m  [["ingredient_id", 8]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 885ms (Views: 634.7ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-06 15:14:36 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 72ms (Views: 60.3ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 15:14:38 -0500
+Processing by ApplicationController#api_request as 
+  Parameters: {"authenticity_token"=>"zlTTknWzUVkhUGRC0/PDba+EWbxoE9fS9N7nvRInHTQkNFuA4xCy+MMhuepNgwkJGLAg9InYkS9QNdbQF3hJxw=="}
+Started GET "/" for 127.0.0.1 at 2019-03-06 15:58:25 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 261ms (Views: 252.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2019-03-06 15:58:51 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (50.9ms)
+Completed 200 OK in 213ms (Views: 152.4ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-06 15:59:06 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-06 15:59:07 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 68ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-06 15:59:09 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-06 16:01:14 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 50ms (Views: 49.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-06 16:01:16 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CYrLYDc95X2ArTIyQtg8utFg5sRLascamZDdqydIfjrVl8iy8doiQpEQro5ezC4KIMaaF1Ho6NjniQoFY+H2gA==", "username"=>"Eric", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Eric"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 96ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-03-06 16:01:16 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 73ms (Views: 45.0ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 16:01:17 -0500
+Processing by RecipesController#api_request as 
+  Parameters: {"authenticity_token"=>"6f7TbduJSVs8s9/yw/2jP28RfBtoGxU+VQbM6j9w5LcDnlt/TSqq+t7CAlpdjWlb2CUFU4nQU8Px7f2HOi+wRA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/users" for 127.0.0.1 at 2019-03-06 16:02:30 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 304ms (Views: 251.0ms | ActiveRecord: 1.9ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 16:02:32 -0500
+  
+SyntaxError (/Users/erichardiman/github/Mod 2/Rails/FinalProject/food-angel-app/app/controllers/recipes_controller.rb:49: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/recipes_controller.rb:49: syntax error, unexpected end-of-input, expecting keyword_end
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 16:02:41 -0500
+Processing by RecipesController#api_request as 
+  Parameters: {"authenticity_token"=>"NhxxIYNG3F5LW7X/HT3BYwEDWiPdCNak84ewRkcSYI/cfPkzFeU//6kqaFeDTQsHtjcjazzDkFlXbIErQk00fA=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/users" for 127.0.0.1 at 2019-03-06 16:03:11 -0500
+Completed 500 Internal Server Error in 19697ms (ActiveRecord: 1.7ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block (2 levels) in api_request'
+app/controllers/recipes_controller.rb:31:in `block (2 levels) in api_request'
+app/controllers/recipes_controller.rb:29:in `each'
+app/controllers/recipes_controller.rb:29:in `map'
+app/controllers/recipes_controller.rb:29:in `block in api_request'
+app/controllers/recipes_controller.rb:28:in `map'
+app/controllers/recipes_controller.rb:28:in `api_request'
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (4.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 16:03:16 -0500
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (62.3ms)
+Completed 200 OK in 1979ms (Views: 1225.8ms | ActiveRecord: 51.4ms)
+
+
+Processing by RecipesController#api_request as 
+  Parameters: {"authenticity_token"=>"NhxxIYNG3F5LW7X/HT3BYwEDWiPdCNak84ewRkcSYI/cfPkzFeU//6kqaFeDTQsHtjcjazzDkFlXbIErQk00fA=="}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+No template found for RecipesController#api_request, rendering head :no_content
+Completed 204 No Content in 190354ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/recipe" for 127.0.0.1 at 2019-03-06 16:06:36 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/recipe"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 16:06:53 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 320ms (Views: 259.2ms | ActiveRecord: 4.7ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 16:06:54 -0500
+Processing by RecipesController#api_request as 
+  Parameters: {"authenticity_token"=>"swlyGV8MAThGzJpb0b5BLsDYSEsxjo5s4NPY9hdhGM5ZafoLya/imaS9R/NPzotKd+wxA9BFyJFEOOmbEj5MPQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 16052ms (ActiveRecord: 0.1ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block in api_request'
+app/controllers/recipes_controller.rb:30:in `block in api_request'
+app/controllers/recipes_controller.rb:28:in `map'
+app/controllers/recipes_controller.rb:28:in `api_request'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 16:07:26 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (1.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (13.8ms)
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 16:07:37 -0500
+Completed 200 OK in 724ms (Views: 451.6ms | ActiveRecord: 16.5ms)
+
+
+  
+ActionController::RoutingError (No route matches [PUT] "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 16:07:59 -0500
+Started GET "/users" for 127.0.0.1 at 2019-03-06 16:07:59 -0500
+Started GET "/users" for 127.0.0.1 at 2019-03-06 16:07:59 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Processing by UsersController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (8.3ms)
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+Started GET "/users" for 127.0.0.1 at 2019-03-06 16:07:59 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 486ms (Views: 404.9ms | ActiveRecord: 0.5ms)
+
+
+Completed 200 OK in 492ms (Views: 419.6ms | ActiveRecord: 1.2ms)
+
+
+Completed 200 OK in 503ms (Views: 445.6ms | ActiveRecord: 2.7ms)
+
+
+Completed 200 OK in 234ms (Views: 219.4ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/recipe/search/q=.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 16:08:01 -0500
+Processing by RecipesController#api_request as 
+  Parameters: {"authenticity_token"=>"+hkRm9SYJrh7XpiBYTAx7/O8cdVzyWqzlv+xZ14AcR0QeZmJQjvFGZkvRSn/QPuLRIgInZICLE4yFIAKW18l7g=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4897ms (ActiveRecord: 0.1ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block in api_request'
+app/controllers/recipes_controller.rb:30:in `block in api_request'
+app/controllers/recipes_controller.rb:28:in `map'
+app/controllers/recipes_controller.rb:28:in `api_request'
+Started GET "/users" for 127.0.0.1 at 2019-03-06 16:08:39 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (3.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" WHERE "ingredients"."user_id" = ?[0m  [["user_id", 2]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 628ms (Views: 359.6ms | ActiveRecord: 22.5ms)
+
+
+Started PUT "/recipe/search.milk%2Fcorn%2Foatmeal%2Fmushrooms" for 127.0.0.1 at 2019-03-06 16:08:53 -0500
+Processing by RecipesController#api_request as 
+  Parameters: {"authenticity_token"=>"o0PWFzxEoD9rsbNVW8jgW7JF0AWECyGraoZK0Ncbc6JJI14FqudDnonAbv3FuCo/BXGpTWXAZ1bObXu90kQnUQ=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 11584ms (ActiveRecord: 0.9ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `block in api_request'
+app/controllers/recipes_controller.rb:30:in `block in api_request'
+app/controllers/recipes_controller.rb:28:in `map'
+app/controllers/recipes_controller.rb:28:in `api_request'

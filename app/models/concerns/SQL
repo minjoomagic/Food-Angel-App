@@ -1,0 +1,14 @@
+SELECT * FROM users WHERE user_id = current_user.id  ## get users with matching user ID
+SELECT * FROM recipes WHERE user_id = current_user.id  ## get recipes linked by user
+SELECT * FROM recipe_ingredients WHERE recipe_id = ID  ## get recipe ingredients for a given recipe ID
+SELECT * FROM ingredients WHERE name =  AND recipe_id = ID  ## get ingredients for username and matching recipe ID
+
+find the ingredients ids where = user id
+check rec ingred where the ingredient id matches ^ AND get the recipe id
+find the recipe ID where matches ^ rec id [:name]
+
+ingredients = Ingredient.where(user_id: current_user.id)
+@recipe_array = []
+ingredients.each do |ing|
+  @recipe_array << ing.recipes
+end
