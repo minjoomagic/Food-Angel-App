@@ -14,6 +14,34 @@
  *= require_self
  */
 
+ /* ~~~~~~~ LANDING PAGE START ~~~~~~~ */
+.landing-container {
+ background: url('background1.jpg') no-repeat center center;
+ background-size: cover;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.landing-banner {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ background-color: #ffffff99;
+ border-radius: 0.5em;
+ padding: 3em;
+}
+
+.login-signup-buttons {
+ display: flex;
+ width: 50vw;
+ justify-content: space-around;
+ margin-top: 2em;
+}
+/* ~~~~~~~ LANDING PAGE END ~~~~~~~ */
+
+
 body {
   background: url('background1.jpg') no-repeat center center;
 background-size: cover;
