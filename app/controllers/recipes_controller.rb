@@ -1,13 +1,26 @@
 class RecipesController < ApplicationController
 
   def index
-    
-    # ingredients = Ingredient.where(user_id: current_user.id)
-    # recipe_array = []
-    # ingredients.each do |ing|
-    #   recipe_array << ing.recipes
-    # end
-    # @final_array = recipe_array.flatten.uniq
+  end
+
+  def new
+    @recipe = Recipe.new
+  end
+
+  def create
+    @recipe = Recipe.create(recipe_params)
+      if @recipe.save
+        Favorite.create(recipe_id: @recipe.id, user_id: current_user.id)
+      end
+    redirect_to user_path(current_user.id)
+  end
+
+  def destroy
+    @recipe = Recipe.find(params[:id])
+    @favorite = Favorite.find_by(recipe_id: @recipe.id)
+    @favorite.destroy
+    @recipe.destroy
+    redirect_to user_path(current_user.id)
   end
 
   def split_array
@@ -16,7 +29,7 @@ class RecipesController < ApplicationController
     items.each do |element|
        term = term + "#{element},"
     end
-    term
+    term.split(' ').join('+')
   end
 
   def api_request
@@ -28,25 +41,18 @@ class RecipesController < ApplicationController
     if results && results.length > 1
       @recipe_array = []
       results[0..5].map do |recipes|
-        @recipe_array << recipes
+      response = RestClient.get(recipes["href"])
+        if response.code == 200
+          @recipe_array << recipes
+        end
       end
       @recipe_array
       render :index
     end
-        # title href ingredients thumbnail
+  end
 
-
-    # if results && results.length > 1
-    #   results.each_with_index do |hero, index|
-    #     puts "\t#{index+1}. #{hero["biography"]["full-name"]}"
-    #   end
-    #   i = gets.to_i-1
-    #   results[i]
-    #
-    # elsif results && results.length == 1
-    #   results[0] #single result
-    # else
-    #   return nil #error path
-    # end
+  private
+  def recipe_params
+    params.permit(:href, :name, :user_id)
   end
 end

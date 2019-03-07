@@ -6,10 +6,10 @@
 <% end %>
 
 <h3>Favorite Recipes</h3>
+<ul>
 <% @recipes.each do |recipe| %>
-<%= recipe.name %> 
+<li><%= link_to recipe.name, recipe.href %> <%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure ?' } %></li>
 <% end %>
-
-<br>
+</ul>
 <br>
 <%= link_to 'Go Back to my Fridge', users_path %>

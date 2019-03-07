@@ -5,7 +5,8 @@
   <ul>
     <li><%= recipe['ingredients'] %></li>
   </ul>
-  <center><%= button_to 'Add to my Favorites', user_path(current_user.id) %></center>
+  <center><%= button_to 'Add to my Favorites', recipes_path, method: :post, params: { name: recipe['title'], user_id: current_user.id, href: recipe['href'] }
+ %></center>
 <% end %>
 </ul>
 
