@@ -5,6 +5,7 @@
   <ul>
     <li><%= recipe['ingredients'] %></li>
   </ul>
+  <center><%= button_to 'Add to my Favorites', user_path(current_user.id) %></center>
 <% end %>
 </ul>
 

@@ -4,11 +4,15 @@
 <% else %>
 <ul>
   <% @ingredients.each do |food| %>
-  <li><%= food.name %></li>
+  <li><%= food.name %>  <%= link_to "Edit", edit_ingredient_path(food.id) %>  <%= link_to 'Delete', food, method: :delete, data: { confirm: 'Are you sure ?' } %></li>
   <% end %>
 </ul>
 <% end %>
 <br>
 <%= link_to "Add more items to Fridge!", new_ingredient_path %>
+<br>
+<br>
 <%= link_to "Show me the recipes!", search_path(@ingredients_array), method: :put %>
+<br>
+<br>
 <%= button_to 'Logout', logout_path, method: :delete %>

@@ -1,0 +1,10 @@
+<center><h1>Edit <%= @user.username  %>'s Fridge Item</h1></center>
+
+<%= form_for @ingredient do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.submit %>
+<% end %>
+<br>
+<%= link_to "Go back to my Fridge!", users_path %>

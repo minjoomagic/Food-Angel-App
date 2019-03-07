@@ -1,12 +1,13 @@
 class RecipesController < ApplicationController
 
   def index
-    ingredients = Ingredient.where(user_id: current_user.id)
-    recipe_array = []
-    ingredients.each do |ing|
-      recipe_array << ing.recipes
-    end
-    @final_array = recipe_array.flatten.uniq
+    
+    # ingredients = Ingredient.where(user_id: current_user.id)
+    # recipe_array = []
+    # ingredients.each do |ing|
+    #   recipe_array << ing.recipes
+    # end
+    # @final_array = recipe_array.flatten.uniq
   end
 
   def split_array

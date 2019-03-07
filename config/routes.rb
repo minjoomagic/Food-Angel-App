@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :recipes
   resources :recipe_ingredients
   resources :ingredients
+  resources :favorites
   root :to => "application#index"
   get '/login', to: "sessions#new", as: 'login'
   post '/login', to: "sessions#create"
