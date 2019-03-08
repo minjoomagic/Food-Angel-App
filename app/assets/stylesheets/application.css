@@ -16,7 +16,6 @@
 
  /* ~~~~~~~ LANDING PAGE START ~~~~~~~ */
 .landing-container {
- background: url('background1.jpg') no-repeat center center;
  background-size: cover;
  height: 100vh;
  display: flex;
@@ -43,6 +42,10 @@
 
 
 body {
-  background: url('background1.jpg') no-repeat center center;
-background-size: cover;
+  background: url('background1.jpg') no-repeat;
+  background-size: cover;
+}
+
+body,html {
+  height: 100%;
 }

@@ -3,12 +3,20 @@
   <head>
     <title>FoodAngelApp</title>
     <%= csrf_meta_tags %>
-
+    <%= stylesheet_link_tag "bootstrap.min.css" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="container">
+    <div class="row align-items-center h-100">
+      <div class="col"></div>
+      <div class="col-8">
+        <%= yield %>
+      </div>
+      <div class="col"></div>
+    </div>
+
+    <%= javascript_include_tag "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" %>
   </body>
 </html>

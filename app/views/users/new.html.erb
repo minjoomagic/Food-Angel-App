@@ -1,12 +1,26 @@
-<h1>Sign up</h1>
-
-<h4><%= flash[:notice] %></h4>
-
-<%= form_for @user do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <%= f.label :password %>
-  <%= f.text_field :password %>
-
-  <%= f.submit %>
+<% if flash[:notice] %>
+<div class="alert alert-danger" role="alert">
+  <h3>Error Creating New User</h3>
+  <ul>
+  <% flash[:notice].each do |error| %>
+      <li><%= error %></li>
+  <%end %>
+  </ul>
+</div>
 <% end %>
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">Sign Up</h3>
+    <%= form_for @user do |f| %>
+      <div class="form-group">
+        <%= f.label :username %>
+        <%= f.text_field :username, :class => 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, :class => 'form-control' %>
+      </div>
+      <%= f.submit :class => 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>

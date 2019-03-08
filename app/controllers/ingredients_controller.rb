@@ -10,7 +10,7 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.create(downcased_ingredient_params)
     if @ingredient.save
       flash[:notice] = "#{@ingredient.name} has been added to your fridge!"
-    elsif flash[:error] = @ingredient.errors.full_messages
+    elsif flash[:error] = "#{@ingredient.name} is already in your fridge!"
     end
     redirect_to new_ingredient_path
   end

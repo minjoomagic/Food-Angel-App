@@ -22,17 +22,14 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    session[:user_id] = @user.id
-    redirect_to users_path
+    if (@user.valid?)
+      session[:user_id] = @user.id
+      redirect_to users_path
+    else
+      flash[:notice] = @user.errors.full_messages
+      redirect_to new_user_path
+    end
   end
-
-  def destroy # DELETE request /users/:id
-    @user = User.find(params[:id])
-    @user.destroy
-    flash[:notice] = 'You deleted ur account. YEET!'
-    redirect_to new_user_path
-  end
-
 
   private
 

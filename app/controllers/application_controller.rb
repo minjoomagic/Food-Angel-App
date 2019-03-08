@@ -3,9 +3,16 @@ class ApplicationController < ActionController::Base
   skip_before_action :authorized, only: :index
   helper_method :current_user #i can call current_user from a view
   protect_from_forgery with: :exception
+  layout 'application'
 
   def index
     render :index
+  end
+
+  def about
+  end
+
+  def contact
   end
 
   def current_user

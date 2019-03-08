@@ -1,21 +1,47 @@
-<center><h1>Add Items to <%= @user.username %>'s Fridge!</h1></center>
 <% if flash[:notice] %>
-  <%= flash[:notice] %>
+  <div class="alert alert-success" role="alert">
+    <ul>
+      <li><%= flash[:notice].capitalize %></li>
+    </ul>
+  </div>
   <% elsif flash[:error] %>
-  <% flash[:error].each do |error| %>
-  <%= error %>
-  <% end %>
+  <div class="alert alert-danger" role="alert">
+    <ul>
+      <li><%= flash[:error].capitalize %></li>
+    </ul>
+  </div>
 <% end %>
-<ul>
-<% @ingredients.each do |food| %>
-<li><%= food.name %></li>
-<% end %>
-</ul>
-<%= form_for @ingredient do |f| %>
-  <%= f.label "Add an item to your fridge" %>
-  <%= f.text_field :name %>
-  <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.submit %>
-<% end %>
-<br>
-<%= link_to "Go to Fridge!", users_path %>
+
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">
+      Add an Items to your Fridge
+    </h3>
+    <%= form_for @ingredient, class: "border-bottom" do |f| %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <div class="input-group mb-3">
+    <%= f.text_field :name, class: "form-control" %>
+    <div class="input-group-append">
+    <%= f.submit 'Add Ingredient', class: 'btn btn-outline-secondary' %>
+    </div>
+    </div>
+    <% end %>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Ingredients</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+      <% @ingredients.each do |food| %>
+        <tr>
+          <td><%= food.name.capitalize %></td>
+        </tr>
+      <% end %>
+    </table>
+    <%= link_to "Go to Fridge!", users_path %>
+  </div>
+</div>

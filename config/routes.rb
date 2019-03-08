@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   post '/login', to: "sessions#create"
   delete '/logout', to: "sessions#destroy", as: 'logout'
   put '/recipe/search/q=', to: "recipes#api_request", as: 'search'
+  get '/about', to: "application#about", as: 'about'
+  get '/contact', to: "application#contact", as: 'contact'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

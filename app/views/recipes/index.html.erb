@@ -1,14 +1,37 @@
-<h1>Recipes</h1>
-<ul>
-<% @recipe_array.each do |recipe| %>
-<li><%= link_to recipe['title'], recipe['href'], target: :_blank %></li>
-  <ul>
-    <li><%= recipe['ingredients'] %></li>
-  </ul>
-  <center><%= button_to 'Add to my Favorites', recipes_path, method: :post, params: { name: recipe['title'], user_id: current_user.id, href: recipe['href'] }
- %></center>
-<% end %>
-</ul>
-
-
-<%= link_to 'Back to my Fridge', users_path %>
+<div class="card">
+  <div class=card-body">
+    <h1 class="card-title">
+      Recipes
+    </h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th colspan="2" class="text-center">Recipe Name</th>
+          <th>Ingredients</th>
+          <th>Controls</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @recipe_array.each do |recipe| %>
+        <tr>
+          <td>
+            <object data="<%=recipe['thumbnail'] %>" type="image/png">
+              <img src="https://www.fillmuray.com/32/32" alt="Missing thumbnail">
+            </object>
+          </td>
+          <td>
+            <%= link_to recipe['title'], recipe['href'], target: :_blank %>
+          </td>
+          <td>
+            <%= recipe['ingredients'] %>
+          </td>
+          <td>
+            <%= button_to 'Add to my Favorites', recipes_path, method: :post, params: { name: recipe['title'], user_id: current_user.id, href: recipe['href'], thumbnail: recipe['thumbnail'], ingredients: recipe['ingredients'] }, class: "btn btn-primary"%>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to 'My Fridge', users_path, class: "btn btn-primary" %>
+  </div>
+</div>

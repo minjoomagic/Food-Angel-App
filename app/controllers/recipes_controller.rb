@@ -35,15 +35,16 @@ class RecipesController < ApplicationController
   def api_request
     split_array
     url = "http://www.recipepuppy.com/api/?i=#{split_array}&p=1"
-
     response = RestClient.get(url)
     results = JSON.parse(response.body)["results"]
+    results = results.select do |recipe|
+      recipe['href'] !~ /kraftfoods/
+    end
     if results && results.length > 1
       @recipe_array = []
-      results[0..5].map do |recipes|
-      response = RestClient.get(recipes["href"])
-        if response.code == 200
-          @recipe_array << recipes
+      results[0..5].map do |recipe|
+        if valid_recipe recipe
+          @recipe_array << recipe
         end
       end
       @recipe_array
@@ -51,8 +52,17 @@ class RecipesController < ApplicationController
     end
   end
 
+  def valid_recipe(recipe)
+    begin
+      response = RestClient.get(recipe['href'])
+      return response.code == 200
+    rescue RestClient::Exception
+      return false
+    end
+  end
+
   private
   def recipe_params
-    params.permit(:href, :name, :user_id)
+    params.permit(:href, :name, :user_id, :thumbnail)
   end
 end

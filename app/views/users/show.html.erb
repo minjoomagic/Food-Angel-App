@@ -1,15 +1,33 @@
-<h1><%= @user.username %>'s Profile Page</h1>
+<div class="card">
+  <div class="card-body">
+    <h1 class="card-title">
+      <%= @user.username %>'s Favorite Recipes
+    </h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th colspan="2" class=text-center">Recipe Name</th>
+          <th>Controls</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @recipes.each do |recipe| %>
+        <tr>
+          <td><img class="img_field" src="<%= recipe['thumbnail'] %>"></td>
+          <td>
+            <%= link_to recipe.name, recipe.href %>
+          </td>
+          <td>
+            <%= link_to 'Delete', recipe, method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure ?' } %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= link_to 'Go Back to my Fridge', users_path, class: 'btn btn-primary' %>
+  </div>
+</div>
 
 <% if flash[:notice] %>
-<h3><i>Error: <%= flash[:notice] %></i></h3>
-<img src="https://media.giphy.com/media/muKS0FZTV8Ih2/giphy.gif">
+<h3>Error: <%= flash[:notice] %></h3>
 <% end %>
-
-<h3>Favorite Recipes</h3>
-<ul>
-<% @recipes.each do |recipe| %>
-<li><%= link_to recipe.name, recipe.href %> <%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure ?' } %></li>
-<% end %>
-</ul>
-<br>
-<%= link_to 'Go Back to my Fridge', users_path %>

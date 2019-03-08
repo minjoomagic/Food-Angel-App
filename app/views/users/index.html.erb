@@ -1,18 +1,37 @@
-<h1>Items currently in <%= @user.username %>'s fridge!</h1>
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title">
+      <span class="text-center"><%= @user.username %>'s Fridge</span>
+      <%= link_to "Add to Fridge", new_ingredient_path, class: "btn btn-secondary float-right" %>
+    </h2>
 <% if @ingredients == [] %>
   <p>Your fridge is currently empty, <%= link_to "Click Here", new_ingredient_path %> to add to your fridge!</p>
+  <%= link_to 'Logout', logout_path, method: :delete, class: 'btn btn-danger float-left' %>
 <% else %>
-<ul>
+<table class="table">
+  <thead>
+    <tr>
+      <th class="w-75">Ingredients</th>
+      <th>Controls</th>
+    </tr>
+  </thead>
+  <tbody>
   <% @ingredients.each do |food| %>
-  <li><%= food.name %>  <%= link_to "Edit", edit_ingredient_path(food.id) %>  <%= link_to 'Delete', food, method: :delete, data: { confirm: 'Are you sure ?' } %></li>
-  <% end %>
-</ul>
+    <tr>
+      <td>
+        <%= food.name.capitalize %>
+      </td>
+      <td>
+        <%= link_to "Edit", edit_ingredient_path(food.id), class: 'btn btn-primary' %>
+        <%= link_to 'Delete', food, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to "Get Recipes!", search_path(@ingredients_array), method: :put, class: 'btn btn-success' %> <%= link_to 'Logout', logout_path, method: :delete, class: 'btn btn-danger float-right' %>
 <% end %>
-<br>
-<%= link_to "Add more items to Fridge!", new_ingredient_path %>
-<br>
-<br>
-<%= link_to "Show me the recipes!", search_path(@ingredients_array), method: :put %>
-<br>
-<br>
-<%= button_to 'Logout', logout_path, method: :delete %>
+
+</div>
+</div>
