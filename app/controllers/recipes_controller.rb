@@ -9,6 +9,7 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.create(recipe_params)
+    byebug
       if @recipe.save
         Favorite.create(recipe_id: @recipe.id, user_id: current_user.id)
       end
@@ -34,15 +35,17 @@ class RecipesController < ApplicationController
 
   def api_request
     split_array
-    url = "http://www.recipepuppy.com/api/?i=#{split_array}&p=1"
+    url = "http://www.recipepuppy.com/api/?i=#{split_array}"
     response = RestClient.get(url)
     results = JSON.parse(response.body)["results"]
     results = results.select do |recipe|
       recipe['href'] !~ /kraftfoods/
+      recipe['href'] !~ /myrecipes/
+      recipe['href'] !~ /allrecipes/
     end
     if results && results.length > 1
       @recipe_array = []
-      results[0..5].map do |recipe|
+      results[0..9].map do |recipe|
         if valid_recipe recipe
           @recipe_array << recipe
         end
@@ -54,8 +57,8 @@ class RecipesController < ApplicationController
 
   def valid_recipe(recipe)
     begin
-      response = RestClient.get(recipe['href'])
-      return response.code == 200
+      recipe = RestClient.get(recipe['href'])
+      return true
     rescue RestClient::Exception
       return false
     end
@@ -63,6 +66,6 @@ class RecipesController < ApplicationController
 
   private
   def recipe_params
-    params.permit(:href, :name, :user_id, :thumbnail)
+    params.permit(:href, :name, :user_id, :thumbnail, :ingredients)
   end
 end

@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :authorized #lock down this whole app
-  skip_before_action :authorized, only: :index
+  skip_before_action :authorized, only: [:index, :about, :contact]
   helper_method :current_user #i can call current_user from a view
   protect_from_forgery with: :exception
   layout 'application'
