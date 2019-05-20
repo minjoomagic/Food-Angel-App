@@ -9,7 +9,6 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.create(recipe_params)
-    byebug
       if @recipe.save
         Favorite.create(recipe_id: @recipe.id, user_id: current_user.id)
       end
@@ -66,6 +65,6 @@ class RecipesController < ApplicationController
 
   private
   def recipe_params
-    params.permit(:href, :name, :user_id, :thumbnail, :ingredients)
+    params.permit(:name, :user_id, :href, :thumbnail)
   end
 end

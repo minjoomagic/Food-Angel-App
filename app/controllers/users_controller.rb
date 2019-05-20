@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       @ingredients_array << food.name
     end
   end
-
+ 
   def show
     @user = User.find(params[:id])
     @recipes = current_user.recipes
